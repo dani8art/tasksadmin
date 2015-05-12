@@ -6,6 +6,8 @@
             "home": "Home",
             "entities": {
                 "main": "Entities",
+                "profile": "Profile",
+                "task": "Task",
                 "additionalEntity": "JHipster will add additional entities here (do not translate!)"
             },
             "account": {

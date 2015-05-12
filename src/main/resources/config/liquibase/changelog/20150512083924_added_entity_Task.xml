@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+
+    <property name="now" value="now()" dbms="mysql,h2"/>
+    <property name="now" value="current_timestamp" dbms="postgresql"/>
+
+    <!--
+        Added the entity Task.
+    -->
+    <changeSet id="20150512083924" author="jhipster">
+        <createTable tableName="TASK">
+            <column name="id" type="bigint" autoIncrement="true">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="title" type="varchar(255)">
+                <constraints nullable="false" />
+            </column>
+            <column name="description" type="varchar(255)">
+                <constraints nullable="false" />
+            </column>
+            <column name="priority" type="integer"/>
+            <column name="end_date" type="date"/>
+            <column name="topic" type="varchar(255)"/>
+            <column name="type" type="varchar(255)"/>
+            <column name="completed" type="bit"/>
+            <column name="insert_date" type="date"/>
+            <column name="user_id" type="bigint"/>
+        </createTable>
+        
+        <addForeignKeyConstraint baseColumnNames="user_id"
+                                 baseTableName="TASK"
+                                 constraintName="fk_task_user_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="JHI_USER"/>
+
+    </changeSet>
+</databaseChangeLog>

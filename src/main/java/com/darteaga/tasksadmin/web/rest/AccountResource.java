@@ -2,13 +2,17 @@ package com.darteaga.tasksadmin.web.rest;
 
 import com.codahale.metrics.annotation.Timed;
 import com.darteaga.tasksadmin.domain.Authority;
+import com.darteaga.tasksadmin.domain.Profile;
 import com.darteaga.tasksadmin.domain.User;
+import com.darteaga.tasksadmin.repository.ProfileRepository;
 import com.darteaga.tasksadmin.repository.UserRepository;
 import com.darteaga.tasksadmin.security.SecurityUtils;
 import com.darteaga.tasksadmin.service.MailService;
 import com.darteaga.tasksadmin.service.UserService;
 import com.darteaga.tasksadmin.web.rest.dto.UserDTO;
+
 import org.apache.commons.lang.StringUtils;
+import org.joda.time.LocalDate;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpStatus;
@@ -19,6 +23,7 @@ import org.springframework.web.bind.annotation.*;
 import javax.inject.Inject;
 import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;
+
 import java.io.UnsupportedEncodingException;
 import java.net.URLDecoder;
 import java.util.*;
@@ -34,6 +39,9 @@ public class AccountResource {
 
     @Inject
     private UserRepository userRepository;
+    
+    @Inject
+    private ProfileRepository profileRepository;
 
     @Inject
     private UserService userService;
@@ -64,7 +72,13 @@ public class AccountResource {
             request.getServerName() +          // "myhost"
             ":" +                              // ":"
             request.getServerPort();           // "80"
-
+            
+            Profile p = new Profile();
+            p.setImage("/default");
+            p.setLastLogin(new LocalDate());
+            p.setUser(user);
+            profileRepository.save(p);
+            
             mailService.sendActivationEmail(user, baseUrl);
             return new ResponseEntity<>(HttpStatus.CREATED);
         }

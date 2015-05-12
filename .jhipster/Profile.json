@@ -1,0 +1,44 @@
+{
+    "relationships": [
+        {
+            "relationshipId": 1,
+            "relationshipName": "User",
+            "relationshipNameCapitalized": "User",
+            "relationshipFieldName": "user",
+            "otherEntityName": "user",
+            "relationshipType": "one-to-one",
+            "otherEntityNameCapitalized": "User",
+            "ownerSide": false
+        }
+    ],
+    "fields": [
+        {
+            "fieldId": 1,
+            "fieldName": "image",
+            "fieldType": "String",
+            "fieldNameCapitalized": "Image",
+            "fieldNameUnderscored": "image",
+            "fieldInJavaBeanMethod": "Image",
+            "fieldValidate": false
+        },
+        {
+            "fieldId": 2,
+            "fieldName": "LastLogin",
+            "fieldType": "LocalDate",
+            "fieldNameCapitalized": "LastLogin",
+            "fieldNameUnderscored": "last_login",
+            "fieldInJavaBeanMethod": "LastLogin",
+            "fieldValidate": false
+        }
+    ],
+    "fieldsContainOwnerManyToMany": false,
+    "fieldsContainOneToMany": false,
+    "fieldsContainLocalDate": true,
+    "fieldsContainCustomTime": true,
+    "fieldsContainBigDecimal": false,
+    "fieldsContainDateTime": false,
+    "fieldsContainDate": false,
+    "changelogDate": "20150512083357",
+    "pagination": "pager",
+    "validation": false
+}

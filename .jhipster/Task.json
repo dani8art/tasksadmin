@@ -1,0 +1,104 @@
+{
+    "relationships": [
+        {
+            "relationshipId": 1,
+            "relationshipName": "User",
+            "relationshipNameCapitalized": "User",
+            "relationshipFieldName": "user",
+            "otherEntityName": "user",
+            "relationshipType": "many-to-one",
+            "otherEntityNameCapitalized": "User",
+            "otherEntityField": "login"
+        }
+    ],
+    "fields": [
+        {
+            "fieldId": 1,
+            "fieldName": "title",
+            "fieldType": "String",
+            "fieldNameCapitalized": "Title",
+            "fieldNameUnderscored": "title",
+            "fieldInJavaBeanMethod": "Title",
+            "fieldValidate": true,
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldId": 2,
+            "fieldName": "description",
+            "fieldType": "String",
+            "fieldNameCapitalized": "Description",
+            "fieldNameUnderscored": "description",
+            "fieldInJavaBeanMethod": "Description",
+            "fieldValidate": true,
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldId": 3,
+            "fieldName": "priority",
+            "fieldType": "Integer",
+            "fieldNameCapitalized": "Priority",
+            "fieldNameUnderscored": "priority",
+            "fieldInJavaBeanMethod": "Priority",
+            "fieldValidate": false
+        },
+        {
+            "fieldId": 4,
+            "fieldName": "EndDate",
+            "fieldType": "LocalDate",
+            "fieldNameCapitalized": "EndDate",
+            "fieldNameUnderscored": "end_date",
+            "fieldInJavaBeanMethod": "EndDate",
+            "fieldValidate": false
+        },
+        {
+            "fieldId": 5,
+            "fieldName": "topic",
+            "fieldType": "String",
+            "fieldNameCapitalized": "Topic",
+            "fieldNameUnderscored": "topic",
+            "fieldInJavaBeanMethod": "Topic",
+            "fieldValidate": false
+        },
+        {
+            "fieldId": 6,
+            "fieldName": "type",
+            "fieldType": "String",
+            "fieldNameCapitalized": "Type",
+            "fieldNameUnderscored": "type",
+            "fieldInJavaBeanMethod": "Type",
+            "fieldValidate": false
+        },
+        {
+            "fieldId": 7,
+            "fieldName": "completed",
+            "fieldType": "Boolean",
+            "fieldNameCapitalized": "Completed",
+            "fieldNameUnderscored": "completed",
+            "fieldInJavaBeanMethod": "Completed",
+            "fieldValidate": false
+        },
+        {
+            "fieldId": 8,
+            "fieldName": "insertDate",
+            "fieldType": "LocalDate",
+            "fieldNameCapitalized": "InsertDate",
+            "fieldNameUnderscored": "insert_date",
+            "fieldInJavaBeanMethod": "InsertDate",
+            "fieldValidate": false
+        }
+    ],
+    "fieldsContainOwnerManyToMany": false,
+    "fieldsContainOneToMany": false,
+    "fieldsContainLocalDate": true,
+    "fieldsContainCustomTime": true,
+    "fieldsContainBigDecimal": false,
+    "fieldsContainDateTime": false,
+    "fieldsContainDate": false,
+    "changelogDate": "20150512083924",
+    "pagination": "pager",
+    "validation": true
+}

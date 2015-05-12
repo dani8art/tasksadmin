@@ -1,14 +1,17 @@
 package com.darteaga.tasksadmin.domain;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import org.hibernate.annotations.Cache;
 import org.hibernate.annotations.CacheConcurrencyStrategy;
 import org.hibernate.validator.constraints.Email;
+
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Size;
+
 import java.io.Serializable;
 import java.util.HashSet;
 import java.util.Set;
@@ -69,8 +72,33 @@ public class User extends AbstractAuditingEntity implements Serializable {
             inverseJoinColumns = {@JoinColumn(name = "authority_name", referencedColumnName = "name")})
     @Cache(usage = CacheConcurrencyStrategy.NONSTRICT_READ_WRITE)
     private Set<Authority> authorities = new HashSet<>();
+    
+    @OneToMany(mappedBy = "user")
+    @JsonIgnore
+    @Cache(usage = CacheConcurrencyStrategy.NONSTRICT_READ_WRITE)
+    private Set<Task> tasks = new HashSet<>();
+    
+    @JsonIgnore
+    @OneToOne(mappedBy = "user")
+    private Profile profile;
 
-    public Long getId() {
+    public Set<Task> getTasks() {
+		return tasks;
+	}
+
+	public void setTasks(Set<Task> tasks) {
+		this.tasks = tasks;
+	}
+
+	public Profile getProfile() {
+		return profile;
+	}
+
+	public void setProfile(Profile profile) {
+		this.profile = profile;
+	}
+
+	public Long getId() {
         return id;
     }
 

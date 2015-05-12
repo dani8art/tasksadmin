@@ -1,0 +1,26 @@
+{
+    "tasksadminApp": {
+        "task" : {
+            "home": {
+                "title": "Tasks",
+                "createLabel": "Create a new Task",
+                "createOrEditLabel": "Create or edit a Task"
+            },
+            "delete": {
+                "question": "Are you sure you want to delete Task {{ id }}?"
+            },
+            "detail": {
+                "title": "Task"
+            },
+            "title": "Title",
+            "description": "Description",
+            "priority": "Priority",
+            "EndDate": "EndDate",
+            "topic": "Topic",
+            "type": "Type",
+            "completed": "Completed",
+            "insertDate": "InsertDate",
+            "User": "User"
+        }
+    }
+}
