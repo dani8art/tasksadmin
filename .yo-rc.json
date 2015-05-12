@@ -1,0 +1,19 @@
+{
+  "generator-jhipster": {
+    "baseName": "tasksadmin",
+    "packageName": "com.darteaga.tasksadmin",
+    "packageFolder": "com/darteaga/tasksadmin",
+    "authenticationType": "xauth",
+    "hibernateCache": "ehcache",
+    "clusteredHttpSession": "no",
+    "websocket": "no",
+    "databaseType": "sql",
+    "devDatabaseType": "h2Memory",
+    "prodDatabaseType": "mysql",
+    "useCompass": false,
+    "buildTool": "maven",
+    "frontendBuilder": "grunt",
+    "javaVersion": "7",
+    "rememberMeKey": "365f4beb0df6976142406aebe88fb1adda2d2616"
+  }
+}

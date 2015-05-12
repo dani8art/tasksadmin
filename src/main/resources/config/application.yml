@@ -1,0 +1,38 @@
+# Disable the spring security default configuration from spring-boot-actuator
+management.security.enabled: true
+security.basic.enabled: false
+
+# Disable Jolokia - An http/json bridge for remote JMX access
+endpoints.jolokia.enabled: false
+
+# security configuration (this key should be unique for your application, and kept secret)
+jhipster.security.rememberme.key: 365f4beb0df6976142406aebe88fb1adda2d2616
+
+async:
+    corePoolSize: 2
+    maxPoolSize: 50
+    queueCapacity: 10000
+
+mail:
+    host: localhost
+    port: 25
+    username:
+    password:
+    protocol: smtp
+    tls: false
+    auth: false
+    from: tasksadmin@localhost
+
+authentication:
+    xauth:
+        secret: myXAuthSecret
+        # Token is valid 30 minutes
+        tokenValidityInSeconds: 1800
+
+swagger:
+    title: tasksadmin API
+    description: tasksadmin applications and beyond!
+    termsOfServiceUrl: http://jhipster.github.io/
+    contact:
+    license: Apache 2.0
+    licenseUrl: http://www.apache.org/licenses/LICENSE-2.0.html
