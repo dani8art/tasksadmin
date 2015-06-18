@@ -103,8 +103,8 @@ public class Task implements Serializable {
         return endDate;
     }
 
-    public void setEndDate(LocalDate EndDate) {
-        this.endDate = EndDate;
+    public void setEndDate(LocalDate endDate) {
+        this.endDate = endDate;
     }
 
     public String getTopic() {

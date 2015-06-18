@@ -1,13 +1,13 @@
 server:
-    port: 8080
+    port: 8181
 
 spring:
     profiles:
         active: prod
     datasource:
         dataSourceClassName: com.mysql.jdbc.jdbc2.optional.MysqlDataSource
-        url: jdbc:mysql://localhost:3306/tasksadmin
-        databaseName: 
+        url: jdbc:mysql://localhost:3306/tasksadmin1
+        databaseName: tasksadmin1
         serverName: 
         username: root
         password: 

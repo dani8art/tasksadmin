@@ -7,6 +7,7 @@ import com.darteaga.tasksadmin.repository.TaskRepository;
 import com.darteaga.tasksadmin.repository.UserRepository;
 import com.darteaga.tasksadmin.web.rest.util.PaginationUtil;
 
+import org.joda.time.LocalDate;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.data.domain.Page;
@@ -52,6 +53,14 @@ public class TaskResource {
         log.debug("REST request to save Task : {}", task);
         if (task.getId() != null) {
             return ResponseEntity.badRequest().header("Failure", "A new task cannot already have an ID").build();
+        }
+        task.setInsertDate(new LocalDate());
+        task.setCompleted(false);
+        if(task.getTopic() == null || task.getTopic().equals("")){
+        	task.setTopic("General");
+        }
+        if(task.getType() == null || task.getType().equals("")){
+        	task.setType("Execute");
         }
         taskRepository.save(task);
         return ResponseEntity.created(new URI("/api/tasks/" + task.getId())).build();
