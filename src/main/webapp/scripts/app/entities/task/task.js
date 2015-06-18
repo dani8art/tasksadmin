@@ -7,7 +7,7 @@ angular.module('tasksadminApp')
                 parent: 'entity',
                 url: '/task',
                 data: {
-                    roles: ['ROLE_USER'],
+                    roles: ['ROLE_ADMIN'],
                     pageTitle: 'tasksadminApp.task.home.title'
                 },
                 views: {
@@ -27,7 +27,7 @@ angular.module('tasksadminApp')
                 parent: 'entity',
                 url: '/task/:id',
                 data: {
-                    roles: ['ROLE_USER'],
+                    roles: ['ROLE_ADMIN'],
                     pageTitle: 'tasksadminApp.task.detail.title'
                 },
                 views: {

@@ -31,6 +31,8 @@ spring:
     thymeleaf:
         mode: XHTML
         cache: false
+    mail:
+        from: tasksadmin@darteaga.com
 
 metrics:
     jmx.enabled: true

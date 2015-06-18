@@ -6,11 +6,11 @@ spring:
         active: prod
     datasource:
         dataSourceClassName: com.mysql.jdbc.jdbc2.optional.MysqlDataSource
-        url: jdbc:mysql://localhost:3306/tasksadmin1
-        databaseName: tasksadmin1
+        url: jdbc:mysql://localhost:3306/tasksadmin?createDatabaseIfNotExist=true
+        databaseName: tasksadmin
         serverName: 
         username: root
-        password: 
+        password: 03d04a90b+I
         cachePrepStmts: true
         prepStmtCacheSize: 250
         prepStmtCacheSqlLimit: 2048
@@ -34,7 +34,9 @@ spring:
     thymeleaf:
         mode: XHTML
         cache: true
-
+    mail:
+        from: tasksadmin@darteaga.com
+        
 metrics:
     jmx.enabled: true
     graphite:
