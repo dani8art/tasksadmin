@@ -13,11 +13,11 @@ var parseVersionFromPomXml = function() {
     return version;
 };
 
-// usemin custom step
-var useminAutoprefixer = {
-    name: 'autoprefixer',
-    createConfig: require('grunt-usemin/lib/config/cssmin').createConfig // Reuse cssmins createConfig
-};
+//// usemin custom step
+//var useminAutoprefixer = {
+//    name: 'autoprefixer',
+//    createConfig: require('grunt-usemin/lib/config/cssmin').createConfig // Reuse cssmins createConfig
+//};
 
 module.exports = function (grunt) {
     require('load-grunt-tasks')(grunt);
@@ -170,7 +170,8 @@ module.exports = function (grunt) {
                     html: {
                         steps: {
                             js: ['concat', 'uglifyjs'],
-                            css: ['cssmin', useminAutoprefixer] // Let cssmin concat files so it corrects relative paths to fonts and images
+                           // css: ['cssmin', useminAutoprefixer] // Let cssmin concat files so it corrects relative paths to fonts and images
+        					css: ['cssmin']
                         },
                             post: {}
                         }
@@ -211,7 +212,7 @@ module.exports = function (grunt) {
                 }]
             }
         },
-        cssmin: {
+        //cssmin: {
             // By default, your `index.html` <!-- Usemin Block --> will take care of
             // minification. This option is pre-configured if you do not wish to use
             // Usemin blocks.
@@ -223,10 +224,10 @@ module.exports = function (grunt) {
             //         ]
             //     }
             // }
-            options: {
-                root: 'src/main/webapp' // Replace relative paths for static resources with absolute path
-            }
-        },
+           // options: {
+          //      root: 'src/main/webapp' // Replace relative paths for static resources with absolute path
+          //  }
+      //  },
         ngtemplates:    {
             dist: {
                 cwd: 'src/main/webapp',
@@ -292,6 +293,11 @@ module.exports = function (grunt) {
                     src: [
                         'generated/*'
                     ]
+                },{
+                    expand: true,
+                    cwd: 'src/main/webapp/bower_components/bootstrap/dist',
+                    src: 'fonts/*',
+                    dest: '<%= yeoman.dist %>/assets/'
                 }]
             },
             generateHerokuDirectory: {
