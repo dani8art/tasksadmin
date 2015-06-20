@@ -27,11 +27,11 @@ authentication:
     xauth:
         secret: myXAuthSecret
         # Token is valid 30 minutes
-        tokenValidityInSeconds: 1800
+        tokenValidityInSeconds: 604800
 
 swagger:
-    title: tasksadmin API
-    description: tasksadmin applications and beyond!
+    title: TasksAdmin API
+    description: TasksAdmin applications and beyond!
     termsOfServiceUrl: http://jhipster.github.io/
     contact:
     license: Apache 2.0
