@@ -15,7 +15,7 @@ public interface TaskRepository extends JpaRepository<Task,Long> {
     @Query("select task from Task task where task.user.login = ?#{principal.username}")
     List<Task> findAllForCurrentUser();
     
-    @Query("select task from Task task where task.user = ?1 order by task.endDate, task.priority")
+    @Query("select task from Task task where task.user = ?1 and task.completed=0 order by task.endDate, task.priority")
 	public List<Task> findByUser(User user);
 
 }
