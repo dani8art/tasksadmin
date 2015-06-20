@@ -29,6 +29,9 @@ angular.module('tasksadminApp')
     	            $('#addTaskModal').modal('hide');
     	        };
     	        
+    	        $scope.removeQuery = function(){
+    	        	$scope.query = "";
+    	        }
     	        $scope.update = function (id) {
     	            Task.get({id: id}, function(result) {
     	                $scope.task = result;
