@@ -52,6 +52,21 @@ angular.module('tasksadminApp')
     	                });
     	        };
     	        
+    	        $scope.completeTask = function(id){
+    	        	$('#'+id).find('.task-check').toggleClass('glyphicon-unchecked');
+    	        	$('#'+id).find('.task-check').toggleClass('glyphicon-check');    	        	
+    	        	Task.get({id: id}, function(result) {
+    	                result.completed=1;    	               
+    	                //$('#addTaskModal').modal('show');
+    	                Task.update(result,function () {
+    	                	$('#'+id).closest('.task').delay(500).slideUp(1000);
+    	    	            //$scope.tasks=Task.getByUser({login:$scope.account.login});
+    	                	// $('#addTaskModal').modal('hide');
+    	    	            $scope.clear();
+    	    	        });
+    	            });
+    	        };
+    	        
     	        $scope.filtrarPorTopic= function(id){
     	        	Task.get({id: id}, function(result) {
     	        		$scope.query = result.topic;
