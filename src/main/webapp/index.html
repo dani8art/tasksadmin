@@ -5,7 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title>tasksadmin</title>
         <meta name="description" content="">
-        <meta name="viewport" content="width=device-width">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
         <!-- build:css assets/styles/vendor.css -->
         <!-- bower:css -->
@@ -24,9 +24,9 @@
         <div ui-view="navbar" ng-cloak=""></div>
         <div class="container">
         
-            <div  ui-view="content"></div>
+            <div  ui-view="content" ng-cloak=""></div>
 
-            <div class="footer">
+            <div class="footer" ng-cloak="">
                 <p class="text-center" >
 					Developed by <a href="http://darteaga.com">darteaga.com</a>
 				</p>
