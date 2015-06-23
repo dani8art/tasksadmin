@@ -15,6 +15,7 @@ import org.apache.commons.lang.StringUtils;
 import org.joda.time.LocalDate;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.core.env.Environment;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
@@ -36,7 +37,10 @@ import java.util.*;
 public class AccountResource {
 
     private final Logger log = LoggerFactory.getLogger(AccountResource.class);
-
+    
+    @Inject
+    private Environment env;
+    
     @Inject
     private UserRepository userRepository;
     
@@ -72,6 +76,9 @@ public class AccountResource {
             request.getServerName() +          // "myhost"
             ":" +                              // ":"
             request.getServerPort();           // "80"
+            
+            if(env.getActiveProfiles()[0].equals("prod"))
+            	baseUrl += "/tasksadmin"; //en producción se desplega en http://darteaga.com/tasksadmin/
             
             Profile p = new Profile();
             p.setImage("/default");
