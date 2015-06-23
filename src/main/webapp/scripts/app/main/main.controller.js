@@ -70,22 +70,45 @@ angular.module('tasksadminApp')
     	            });
     	        };
     	        
-    	        $scope.filtrarPorTopic= function(id){
-    	        	Task.get({id: id}, function(result) {
-    	        		$scope.query = result.topic;
-    	            });
-    	        }
-    	        
-    	        $scope.filtrarPorTipo= function(id){
-    	        	Task.get({id: id}, function(result) {
-    	        		$scope.query = result.type;
-    	            });
-    	        }
+    	        //filtros:
+    	        $scope.filtrarPorTopic= function(topic){
+	        		$scope.query = topic;
+		        }
+		        
+		        $scope.filtrarPorTipo= function(type){
+		        		$scope.query = type;
+		        }
     	        
     	        $scope.filtrarPorFecha= function(id){
     	        	Task.get({id: id}, function(result) {
     	        		$scope.query = result.endDate;
     	            });
+    	        }
+    	        
+    	        //editor:
+    	        $scope.addLink = function(){
+    	        	$('#description').val($('#description').val()+"<a href='' target='_blank'>Link</a>");
+    	        }
+    	        
+    	        $scope.addBlod =function(){
+    	        	$('#description').val($('#description').val()+"<b></b>");
+    	        }
+    	        
+    	        $scope.addEm = function(){
+    	        	$('#description').val($('#description').val()+"<em></em>");
+    	        }
+    	        
+    	        $scope.addBr = function(){
+    	        	$('#description').val($('#description').val()+"<br>");
+    	        }
+    	        
+    	        $scope.addList = function(){
+    	        	var description= $('#description').val();
+    	        	if(description.length > 0){
+    	        		$('#description').val($('#description').val()+"\n<ul>\n<li>item</li>\n</ul>");
+    	        	}else{
+    	        		$('#description').val($('#description').val()+"<ul>\n<li>item</li>\n</ul>");
+    	        	}    	        	
     	        }
     	        
            }else{
