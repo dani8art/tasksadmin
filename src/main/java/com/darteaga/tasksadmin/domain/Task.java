@@ -3,15 +3,20 @@ package com.darteaga.tasksadmin.domain;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+import com.darteaga.tasksadmin.domain.util.CustomDateTimeDeserializer;
+import com.darteaga.tasksadmin.domain.util.CustomDateTimeSerializer;
 import com.darteaga.tasksadmin.domain.util.CustomLocalDateSerializer;
 import com.darteaga.tasksadmin.domain.util.ISO8601LocalDateDeserializer;
+
 import org.hibernate.annotations.Cache;
 import org.hibernate.annotations.CacheConcurrencyStrategy;
 import org.hibernate.annotations.Type;
+import org.joda.time.DateTime;
 import org.joda.time.LocalDate;
 
 import javax.persistence.*;
 import javax.validation.constraints.*;
+
 import java.io.Serializable;
 import java.util.HashSet;
 import java.util.Set;
@@ -24,11 +29,9 @@ import java.util.Objects;
 @Table(name = "TASK")
 @Cache(usage = CacheConcurrencyStrategy.NONSTRICT_READ_WRITE)
 public class Task implements Serializable {
-	
-	public static final String[] PRIORITIES = {"Very Low","Low","Moderate","Urgency","Very Urgency"};
-	
+
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO) 
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
     @NotNull
@@ -42,11 +45,11 @@ public class Task implements Serializable {
     @Column(name = "priority")
     private Integer priority;
 
-    @Type(type = "org.jadira.usertype.dateandtime.joda.PersistentLocalDate")
-    @JsonSerialize(using = CustomLocalDateSerializer.class)
-    @JsonDeserialize(using = ISO8601LocalDateDeserializer.class)
+    @Type(type = "org.jadira.usertype.dateandtime.joda.PersistentDateTime")
+    @JsonSerialize(using = CustomDateTimeSerializer.class)
+    @JsonDeserialize(using = CustomDateTimeDeserializer.class)
     @Column(name = "end_date", nullable = false)
-    private LocalDate endDate;
+    private DateTime endDate;
 
     @Column(name = "topic")
     private String topic;
@@ -57,13 +60,12 @@ public class Task implements Serializable {
     @Column(name = "completed")
     private Boolean completed;
 
-    @Type(type = "org.jadira.usertype.dateandtime.joda.PersistentLocalDate")
-    @JsonSerialize(using = CustomLocalDateSerializer.class)
-    @JsonDeserialize(using = ISO8601LocalDateDeserializer.class)
+    @Type(type = "org.jadira.usertype.dateandtime.joda.PersistentDateTime")
+    @JsonSerialize(using = CustomDateTimeSerializer.class)
+    @JsonDeserialize(using = CustomDateTimeDeserializer.class)
     @Column(name = "insert_date", nullable = false)
-    private LocalDate insertDate;
-    
-    
+    private DateTime insertDate;
+
     @ManyToOne
     private User user;
 
@@ -99,11 +101,11 @@ public class Task implements Serializable {
         this.priority = priority;
     }
 
-    public LocalDate getEndDate() {
+    public DateTime getEndDate() {
         return endDate;
     }
 
-    public void setEndDate(LocalDate endDate) {
+    public void setEndDate(DateTime endDate) {
         this.endDate = endDate;
     }
 
@@ -131,11 +133,11 @@ public class Task implements Serializable {
         this.completed = completed;
     }
 
-    public LocalDate getInsertDate() {
+    public DateTime getInsertDate() {
         return insertDate;
     }
 
-    public void setInsertDate(LocalDate insertDate) {
+    public void setInsertDate(DateTime insertDate) {
         this.insertDate = insertDate;
     }
 
@@ -175,7 +177,7 @@ public class Task implements Serializable {
                 ", title='" + title + "'" +
                 ", description='" + description + "'" +
                 ", priority='" + priority + "'" +
-                ", EndDate='" + endDate + "'" +
+                ", endDate='" + endDate + "'" +
                 ", topic='" + topic + "'" +
                 ", type='" + type + "'" +
                 ", completed='" + completed + "'" +

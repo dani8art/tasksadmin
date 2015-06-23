@@ -47,8 +47,8 @@
         },
         {
             "fieldId": 4,
-            "fieldName": "EndDate",
-            "fieldType": "LocalDate",
+            "fieldName": "endDate",
+            "fieldType": "DateTime",
             "fieldNameCapitalized": "EndDate",
             "fieldNameUnderscored": "end_date",
             "fieldInJavaBeanMethod": "EndDate",
@@ -84,7 +84,7 @@
         {
             "fieldId": 8,
             "fieldName": "insertDate",
-            "fieldType": "LocalDate",
+            "fieldType": "DateTime",
             "fieldNameCapitalized": "InsertDate",
             "fieldNameUnderscored": "insert_date",
             "fieldInJavaBeanMethod": "InsertDate",
