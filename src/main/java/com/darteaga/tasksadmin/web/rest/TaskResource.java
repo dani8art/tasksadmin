@@ -7,6 +7,7 @@ import com.darteaga.tasksadmin.repository.TaskRepository;
 import com.darteaga.tasksadmin.repository.UserRepository;
 import com.darteaga.tasksadmin.web.rest.util.PaginationUtil;
 
+import org.joda.time.DateTime;
 import org.joda.time.LocalDate;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -54,7 +55,7 @@ public class TaskResource {
         if (task.getId() != null) {
             return ResponseEntity.badRequest().header("Failure", "A new task cannot already have an ID").build();
         }
-        task.setInsertDate(new LocalDate());
+        task.setInsertDate(new DateTime());
         task.setCompleted(false);
         if(task.getTopic() == null || task.getTopic().equals("")){
         	task.setTopic("General");

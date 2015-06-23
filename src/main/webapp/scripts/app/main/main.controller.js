@@ -11,7 +11,7 @@ angular.module('tasksadminApp')
         		$scope.user = User.get({login:$scope.account.login})
         	   	$scope.tasks=Task.getByUser({login:$scope.account.login});
     	        $scope.create = function () {
-    	        	$scope.task.endDate = $scope.task.endDate.getTime();    	        	
+    	        	//$scope.task.endDate = $scope.task.endDate.getTime();    	        	
     	        	$scope.task.user=$scope.user;
     	            Task.update($scope.task,
     	                function () {
