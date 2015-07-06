@@ -1,0 +1,20 @@
+{
+    "tasksadminApp": {
+        "profile" : {
+            "home": {
+                "title": "Profiles",
+                "createLabel": "Create a new Profile",
+                "createOrEditLabel": "Create or edit a Profile"
+            },
+            "delete": {
+                "question": "Are you sure you want to delete Profile {{ id }}?"
+            },
+            "detail": {
+                "title": "Profile"
+            },
+            "image": "Image",
+            "LastLogin": "LastLogin",
+            "User": "User"
+        }
+    }
+}
