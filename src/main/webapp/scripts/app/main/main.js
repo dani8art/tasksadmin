@@ -10,10 +10,14 @@ angular.module('tasksadminApp')
                     roles: []
                 },
                 views: {
+                	'navbar@': {
+                        templateUrl: 'scripts/components/navbar/navbar.html',
+                        controller: 'NavbarController'
+                    },
                     'content@': {
                         templateUrl: 'scripts/app/main/main.html',
                         controller: 'MainController'
-                    }
+                    }                    
                 },
                 resolve: {
                     mainTranslatePartialLoader: ['$translate', '$translatePartialLoader', function ($translate,$translatePartialLoader) {

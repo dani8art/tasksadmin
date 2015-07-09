@@ -7,6 +7,6 @@ angular.module('tasksadminApp')
 
         $scope.logout = function () {
             Auth.logout();
-            $state.go('login');
+            $state.go('principal');
         };
     });

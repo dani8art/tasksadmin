@@ -3,6 +3,20 @@
 		"header":{
 			"greating": "Task Admin on Cloud",
 			"description": "Manage your time, plan your tasks and access from anywhere </br> through our cloud-based application."
-		}		
+		},
+		"login":{
+			"title":"Authentication",
+			"placeholders":{
+				"login":"Your Login",
+				"password":"Your Password"
+			},
+			"remember":"Remember me",
+			"error": {
+                "authentication": "<strong>Authentication failed!</strong> Please check your credentials and try again."
+            }
+		},
+		"registration":{
+			"title":"Registration"
+		}
 	}
 }

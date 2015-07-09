@@ -71,10 +71,7 @@ angular.module('tasksadminApp', ['LocalStorageModule', 'tmh.dynamicLocale',
         $stateProvider.state('site', {
             'abstract': true,
             views: {
-                'navbar@': {
-                    templateUrl: 'scripts/components/navbar/navbar.html',
-                    controller: 'NavbarController'
-                }
+                
             },
             resolve: {
                 authorize: ['Auth',

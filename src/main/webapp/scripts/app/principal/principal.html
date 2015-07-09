@@ -12,7 +12,7 @@
 			</section>
 
 		<!-- One -->
-			<section id="one" class="main style1">
+		<!--	<section id="one" class="main style1">
 				<div class="container">
 					<div class="row 150%">
 						<div class="6u 12u$(medium)">
@@ -27,10 +27,10 @@
 						</div>
 					</div>
 				</div>
-			</section>
+			</section>-->
 
 		<!-- Two -->
-			<section id="two" class="main style2">
+		<!--	<section id="two" class="main style2">
 				<div class="container">
 					<div class="row 150%">
 						<div class="6u 12u$(medium)">
@@ -54,10 +54,10 @@
 						</div>
 					</div>
 				</div>
-			</section>
+			</section>-->
 
 		<!-- Three -->
-			<section id="three" class="main style1 special">
+		<!--	<section id="three" class="main style1 special">
 				<div class="container">
 					<header class="major">
 						<h2>Adipiscing amet consequat</h2>
@@ -90,25 +90,54 @@
 						</div>
 					</div>
 				</div>
-			</section>
+			</section>-->
 
 		<!-- Four -->
-			<section id="four" class="main style2 special">
+			<section id="four" class="main style2">
 				<div class="container">
-					<header class="major">
-						<h2>Ipsum feugiat consequat?</h2>
-					</header>
-					<p>Sed lacus nascetur ac ante amet sapien.</p>
-					<ul class="actions uniform">
-						<li><a href="#" class="button special">Sign Up</a></li>
-						<li><a href="#" class="button">Learn More</a></li>
-					</ul>
+					<div class="row 150%">
+						<div class="6u 12u$(medium)">
+							<header class="">
+								<h2 translate="principal.login.title">Authentication</h2>
+							</header>
+							<div class="alert alert-danger" ng-show="authenticationError" translate="principal.login.error.authentication">
+				                <strong>Authentication failed!</strong> Please check your credentials and try again.
+				            </div>
+				            <form class="form" role="form" ng-submit="flase">
+				                <div class="row uniform 50%">
+					                <div class="6u 12u$(xsmall)">
+					                    <input type="text" class="form-control" id="username" placeholder="{{'principal.login.placeholders.login' | translate}}" ng-model="username">
+					                </div>
+					                <div class="6u 12u$(xsmall)">
+					                    <input type="password" class="form-control" id="password" placeholder="{{'principal.login.placeholders.password' | translate}}"
+					                           ng-model="password">
+					                </div>
+					                <div class="6u 12u$(small)">
+										<input type="checkbox" id="rememberme" name="rememberme" ng-model="rememberMe">
+										<label for="rememberme" translate="principal.login.remember" style="color:#fff">Remember me</label>
+									</div>				 
+				           			<div class="12u$">
+										<ul class="actions">
+											<li><input type="submit" ng-click="login()" value="Login" class="special" /></li>
+											<!--  <li><input type="reset" value="Reset" /></li> -->
+										</ul>
+									</div>
+				           		</div>
+							</form>
+				        </div>
+						<div class="6u 12u$(medium)">
+							<h2 translate="principal.registration.title">Registration</h2>
+				            <div class="alert alert-warning" translate="global.messages.info.register">
+				                You don't have an account yet? <a href=\"#/register\">Register a new account</a>
+				            </div>
+						</div>
+				      </div>
 				</div>
 			</section>
 
 		<!-- Five -->
 		
-			<section id="five" class="main style1">
+		<!--	<section id="five" class="main style1">
 				<div class="container">
 					<header class="major special">
 						<h2>Elements</h2>
@@ -423,7 +452,7 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 					</section>
 
 				</div>
-			</section>
+			</section>-->
 		
 
 		<!-- Footer -->
@@ -436,6 +465,6 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 					<li><a href="#" class="icon alt fa-envelope"><span class="label">Email</span></a></li>
 				</ul>
 				<ul class="copyright">
-					<li>&copy; Untitled</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+					<li>&copy; darteaga.com</li><li>Design: <a href="http://darteaga.com">darteaga.com</a></li>
 				</ul>
 			</section>

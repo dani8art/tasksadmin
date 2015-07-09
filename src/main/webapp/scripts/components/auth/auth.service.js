@@ -28,7 +28,7 @@ angular.module('tasksadminApp')
             logout: function () {
                 AuthServerProvider.logout();
                 Principal.authenticate(null);
-                $state.go("login");
+                $state.go("principal");
             },
 
             authorize: function(force) {
