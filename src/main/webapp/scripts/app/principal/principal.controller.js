@@ -3,8 +3,11 @@
 angular.module('tasksadminApp')
     .controller('PrincipalController', function ($scope,$state,Principal, Task, User) {
         Principal.identity().then(function(account) {
+        	
             $scope.account = account;
             $scope.isAuthenticated = Principal.isAuthenticated;
+            $('.scrolly').scrolly();
+            
         }).then(function(){
         	
         	if($scope.isAuthenticated()){

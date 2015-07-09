@@ -1,7 +1,8 @@
 {
 	"principal":{
 		"header":{
-			
+			"greating": "Task Admin on Cloud",
+			"description": "Manage your time, plan your tasks and access from anywhere </br> through our cloud-based application."
 		}		
 	}
 }
