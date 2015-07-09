@@ -3,21 +3,21 @@
 angular.module('tasksadminApp')
     .config(function ($stateProvider) {
         $stateProvider
-            .state('home', {
+            .state('principal', {
                 parent: 'site',
-                url: '/home',
+                url: '/',
                 data: {
                     roles: []
                 },
                 views: {
                     'content@': {
-                        templateUrl: 'scripts/app/main/main.html',
-                        controller: 'MainController'
+                        templateUrl: 'scripts/app/principal/principal.html',
+                        controller: 'PrincipalController'
                     }
                 },
                 resolve: {
                     mainTranslatePartialLoader: ['$translate', '$translatePartialLoader', function ($translate,$translatePartialLoader) {
-                        $translatePartialLoader.addPart('main');
+                        $translatePartialLoader.addPart('principal');
                         return $translate.refresh();
                     }]
                 }
