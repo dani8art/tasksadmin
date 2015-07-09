@@ -1,18 +1,12 @@
 {
     "main": {
-        "title": "Welcome, Java Hipster!",
-        "subtitle": "This is your homepage",
-        "logged": {
-            "message": "You are logged in as user \"{{username}}\"."
+        "buttons":{
+        	"clear": "Clear",
+        	"add": "Add task"
         },
-        "question": "If you have any question on JHipster:",
-        "link": {
-            "homepage": "JHipster homepage",
-            "stackoverflow": "JHipster on Stack Overflow",
-            "bugtracker": "JHipster bug tracker",
-            "contact": "contact @java_hipster on Twitter"
+        "shows":{
+        	"query": "Showing tasks filtered by: {{query}}"
         },
-        "like": "If you like JHipster, don't forget to give us a star on",
-        "github": "Github"
+        "filter" : "Search tasks"
     }
 }
