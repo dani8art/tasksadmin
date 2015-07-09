@@ -1,0 +1,12 @@
+{
+    "main": {
+        "buttons":{
+        	"clear": "Limpiar",
+        	"add": "Añadir Tarea"
+        },
+        "shows":{
+        	"query": "Mostrando Tareas filtradas por: {{query}}"
+        },
+        "filter" : "Buscar tareas"
+    }
+}

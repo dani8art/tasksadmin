@@ -1,0 +1,102 @@
+{
+    "global": {
+        "title": "TasksAdmin",
+        "browsehappy": "Estas usando un navegador <strong>Pasado de moda</strong>. Por favor <a href=\"http://browsehappy.com/?locale=en\">actualiza tu navegador</a> para mejorar la experiencia.",
+        "menu": {
+            "home": "Inicio",
+            "entities": {
+                "main": "Entidades",
+                "profile": "Perfil",
+                "task": "Tarea",
+                "additionalEntity": "JHipster will add additional entities here (do not translate!)"
+            },
+            "account": {
+                "main": "Cuenta",
+                "settings": "Settings",
+                "password": "Password",
+                "sessions": "Sessiones",
+                "login": "Authenticate",
+                "logout": "Log out",
+                "register": "Register"
+            },
+            "admin": {
+                "main": "Administración",
+                "tracker": "User tracker",
+                "metrics": "Métricas",
+                "health": "Health",
+                "configuration": "Configuración",
+                "logs": "Logs",
+                "audits": "Audits",
+                "apidocs": "API",
+                "database": "Database"
+            },
+            "language": "Idioma"
+        },
+        "form": {
+            "username": "Login",
+            "username.placeholder": "Tu login",
+            "newpassword": "Nueva password",
+            "newpassword.placeholder": "Nueva password",
+            "confirmpassword": "Confirmar nueva password ",
+            "confirmpassword.placeholder": "Confirmar nueva password",
+            "email": "E-mail",
+            "email.placeholder": "Tu e-mail"
+        },
+        "messages": {
+            "info": {
+                "authenticated": "If you want to <a href=\"#/login\">authenticate</a>, you can try the default accounts:<br/>- Administrator (login=\"admin\" and password=\"admin\") <br/>- User (login=\"user\" and password=\"user\").",
+                "register": "¿Todavía no tienes cuenta? <a href=\"#/register\">Registrate aquí.</a>"
+            },
+            "error": {
+                "dontmatch" : "Las password no coinciden."
+            },
+            "validate": {
+                "newpassword": {
+                    "required": "La password es necesaria.",
+                    "minlength": "La password debe tener al menos 5 caracteres.",
+                    "maxlength": "La password no puede tener mas de 50 caracteres.",
+                    "strength": "Seguridad de la password:"
+                },
+                "confirmpassword": {
+                    "required": "La confirmación de la password es necesaria.",
+                    "minlength": "La password debe tener al menos 5 caracteres.",
+                    "maxlength": "La password no puede tener mas de 50 caracteres."
+                },
+                "email": {
+                    "required": "Tu e-mail es necesario.",
+                    "invalid": "Tu e-mail no es válido.",
+                    "minlength": "Tu e-mail tiene que tener al menos 5 caracteres.",
+                    "maxlength": "Tu email no puede tener más de 50 caracteres."
+                }
+            }
+        }
+    },
+    "entity": {
+        "action": {
+            "back": "Atrás",
+            "cancel": "Cancelar",
+            "delete": "Eliminar",
+            "edit": "Editar",
+            "save": "Guardar",
+            "view": "Ver"
+        },
+        "detail": {
+            "field": "Campo",
+            "value": "Valor"
+        },
+        "delete": {
+            "title": "¿Realmente quiere borrar?"
+        },
+        "validation": {
+            "required": "Este campo es requerido.",
+            "minlength": "This field is required to be at least {{min}} characters.",
+            "maxlength": "This field cannot be longer than {{max}} characters.",
+            "min": "This field should be more than {{min}}.",
+            "max": "This field cannot be more than {{max}}.",
+            "pattern": "This field should follow pattern {{pattern}}.",
+            "number": "This field should be a number.",
+            "datetimelocal": "This field should be a date and time."
+        }
+    },
+    "footer": "This is your footer"
+}

@@ -3,11 +3,11 @@
         "profile" : {
             "home": {
                 "title": "Profiles",
-                "createLabel": "Créer un nouveau Profile",
-                "createOrEditLabel": "Créer ou éditer un Profile"
+                "createLabel": "Create a new Profile",
+                "createOrEditLabel": "Create or edit a Profile"
             },
             "delete": {
-                "question": "Etes-vous certain de vouloir supprimer le Profile {{ id }} ?"
+                "question": "Are you sure you want to delete Profile {{ id }}?"
             },
             "detail": {
                 "title": "Profile"
@@ -18,4 +18,3 @@
         }
     }
 }
-

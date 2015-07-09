@@ -3,11 +3,11 @@
         "task" : {
             "home": {
                 "title": "Tasks",
-                "createLabel": "Créer un nouveau Task",
-                "createOrEditLabel": "Créer ou éditer un Task"
+                "createLabel": "Create a new Task",
+                "createOrEditLabel": "Create or edit a Task"
             },
             "delete": {
-                "question": "Etes-vous certain de vouloir supprimer le Task {{ id }} ?"
+                "question": "Are you sure you want to delete Task {{ id }}?"
             },
             "detail": {
                 "title": "Task"
@@ -24,4 +24,3 @@
         }
     }
 }
-
