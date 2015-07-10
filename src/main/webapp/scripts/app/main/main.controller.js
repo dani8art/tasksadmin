@@ -69,7 +69,9 @@ angular.module('tasksadminApp')
     	                result.completed=1;    	               
     	                //$('#addTaskModal').modal('show');
     	                Task.update(result,function () {
-    	                	$('#'+id).closest('.task').delay(500).slideUp(1000);
+    	                	$('#'+id).closest('.task').delay(500).slideUp(1000,function(){
+    	                		$(this).closest(".task-wrapper").remove();
+    	                	});
     	    	            //$scope.tasks=Task.getByUser({login:$scope.account.login});
     	                	// $('#addTaskModal').modal('hide');
     	    	            $scope.clear();

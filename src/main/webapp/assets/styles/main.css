@@ -16,22 +16,23 @@ Hide ng-cloak on page load, https://docs.angularjs.org/api/ng/directive/ngCloak
 Task style
 ========================================================================== */
 .task{
-	background-color: #f8f8f8;
-  border: 1px solid #e7e7e7;
-  border-width: 1px 1px 1px 1px;
-  /* background-image: -webkit-linear-gradient(top, #fff 0%, #f8f8f8 100%); */
-  background-image: -o-linear-gradient(top, #fff 0%, #f8f8f8 100%);
-  /* background-image: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#f8f8f8)); */
-  /* background-image: linear-gradient(to bottom, #fff 0%, #f8f8f8 100%); */
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffffff', endColorstr='#fff8f8f8', GradientType=0);
-  filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
-  background-repeat: repeat-x;
-  /* border-radius: 4px; */
-  /* -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, .15), 0 1px 5px rgba(0, 0, 0, .075); 
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, .15), 0 1px 1px rgba(0, 0, 0, .075);*/
+	
   margin-bottom: 20px;
 }
-
+.btn-tools{
+	margin-top:15px;
+}
+.task-wrapper{
+	padding:25px;
+	background-image: url(../images/post-it.png);
+	background-size:100% 100%;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+.task-description{
+	margin-top:15px;
+	font-size:17px;
+}
 .task-header{
 	padding: 0px 0px;
 }
@@ -39,8 +40,8 @@ Task style
 	margin-top: 13px;
 }
 .taskcontent{
-	border-top: 1px solid #e7e7e7;
-	background-color:#fff;
+	
+	
 }
 .button-plus{
 	margin-top: 10px;
