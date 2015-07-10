@@ -11,8 +11,10 @@ angular.module('tasksadminApp')
         	}else{
         		$('#bootstrap').remove();
         		$('#main').remove();
-        		$('head').append('<link id="homestyle" rel="stylesheet" href="assets/css/main.css" />');
-        		
+        		var check =$('#homestyle').attr("rel");
+        		if(!check){
+        			$('head').append('<link id="homestyle" rel="stylesheet" href="assets/css/main.css" />');
+        		}
         		$scope.login = function () {
                     Auth.login({
                         username: $scope.username,

@@ -9,8 +9,11 @@ angular.module('tasksadminApp')
         	
         	if($scope.isAuthenticated()){
         		$('#homestyle').remove();
-        		$('head').append('<link id="bootstrap" rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />');
-        		$('head').append('<link id="main" rel="stylesheet" href="assets/styles/main.css">');
+        		var check =$('#bootstrap').attr("rel");
+        		if(!check){
+	        		$('head').append('<link id="bootstrap" rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />');
+	        		$('head').append('<link id="main" rel="stylesheet" href="assets/styles/main.css">');
+        		}
         		
         		$scope.user = User.get({login:$scope.account.login})
         	   	$scope.tasks=Task.getByUser({login:$scope.account.login});
