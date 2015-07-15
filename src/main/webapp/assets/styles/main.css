@@ -1,7 +1,10 @@
 body {
-    background: #fafafa;
+    background: #fff;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     color: #333;
+    padding-top: 70px;
+    background-image: url(../images/corkboard.png);
+	background-repeat: repeat;
 }
 .footer{
 	
@@ -13,28 +16,60 @@ Hide ng-cloak on page load, https://docs.angularjs.org/api/ng/directive/ngCloak
     display: none !important;
 }
 /* ==========================================================================
+button add style
+========================================================================== */
+.add-button-wrapper{
+	 position: fixed;
+	 bottom: 25px;
+	 right: 25px;
+	 z-index: 1030;
+}
+.add-button{
+	 border-radius: 50%;
+  width: 65px;
+  height: 65px;
+  /* line-height: 0; */
+  font-size: 22px;
+  /* vertical-align: middle; */
+    padding-top: 19px;
+  padding-left: 19px;
+  box-shadow: 0 0 4px rgba(0,0,0,.14),0 4px 8px rgba(0,0,0,.28);
+}
+/* ==========================================================================
 Task style
 ========================================================================== */
 .task{
-	
-  margin-bottom: 20px;
+	padding: 15px 15px;
+	padding-top:5px;
+}
+.task-yellow{
+	border: 1px solid #F7FE2E /*#F3F781*/;
+  	background-color: #F2F5A9 ;
+}
+.task-blue{
+	border: 1px solid #2ECCFA;
+  	background-color: #81DAF5;
+}
+.task small{
+	font-size:11px;
 }
 .btn-tools{
 	margin-top:15px;
 }
 .task-wrapper{
-	padding:25px;
+	/*padding:25px;
 	background-image: url(../images/post-it.png);
 	background-size:100% 100%;
 	background-position: center;
-	background-repeat: no-repeat;
+	background-repeat: no-repeat;*/
+	margin-bottom: 20px;
 }
 .task-description{
 	margin-top:15px;
-	font-size:17px;
 }
 .task-header{
 	padding: 0px 0px;
+	text-transform: uppercase;
 }
 .task-header p{
 	margin-top: 13px;
@@ -50,7 +85,7 @@ Task style
 .button-plus a{
 }
 .task-content{
-	padding: 15px 0px;
+	
 }
 .task-tools{
 	margin-top: 15px;
@@ -61,18 +96,56 @@ Task style
 #task-list-wrapper{
 	max-width:1000px;
 }
-
+/* ==========================================================================
+Developement Ribbon
+========================================================================== */
+.navbar-default{
+	background-color: #4686a0;
+	border-bottom:1px solid #4361c2;
+	color: rgba(255, 255, 255, 0.75);
+    background-attachment: fixed,	fixed,	fixed;
+   /* background-image: url("../css/images/overlay2.png"), url("../css/images/overlay3.svg"), linear-gradient(45deg, #9dc66b 5%, #4fa49a 30%, #4361c2);*/
+    background-position: top left,	center center,	center center;
+    background-size: auto,	cover,	cover;
+}
+.navbar-default .navbar-brand {
+  color: #fff;
+}
+.navbar-version {
+  font-size: 10px;
+  color: #fff;
+}
+.navbar-default .navbar-brand:hover, .navbar-default .navbar-brand:focus {
+  color: rgba(255, 255, 255, 0.75);
+  background-color: transparent;
+}
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
+  color: #fff;
+  background-color: #72b5f8;
+  border-bottom:2px solid #4361c2;
+  
+}
+.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+  color: rgba(255, 255, 255, 0.75);
+  background-color: transparent;
+}
+.navbar-default .navbar-nav > li > a {
+  color: #fff;
+}
+.nav-pills > li > a {
+  border-radius: 0px;
+}
 /* ==========================================================================
 Developement Ribbon
 ========================================================================== */
 .development {
-    position: absolute;
+    position: fixed;
     width: 149px;
     height: 149px;
     top: 0;
     left: 0;
     border: 0;
-    z-index: 1000;
+    z-index: 3000;
     background-image: url("../images/development_ribbon.png");
     background-position: center center;
     background-repeat: no-repeat;

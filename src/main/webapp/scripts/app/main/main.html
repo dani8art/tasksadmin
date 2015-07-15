@@ -8,17 +8,17 @@
 								<div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
 									<input type="text"  class="form-control input-lg" id="search" ng-model="query" style="margin-bottom:20px" placeholder="{{'main.filter' | translate}}"/>
 								</div>
-								<div class="col-lg-2 col-md-2 col-sm-6 col-xs-6">
+								<div class="col-lg-4 col-md-4 col-sm-6 col-xs-6">
 									<a href="#" class="btn btn-warning btn-lg btn-block" ng-click="removeQuery()" style="margin-bottom:20px">
 										<span class="glyphicon glyphicon-erase"></span> <span translate="main.buttons.clear">Clear</span>
 									</a>
 								</div>
-								<div class="col-lg-2 col-md-2 col-sm-6 col-xs-6">
-								<a href="#" class="btn btn-primary btn-lg btn-block"
-									id="add-task" data-toggle="modal" data-target="#addTaskModal"
-									style="margin-bottom: 20px"><span
-									class="glyphicon glyphicon-plus"></span> <span translate="main.buttons.add">Add task</span></a>
-							</div>
+								<div class="col-lg-2 col-md-2 col-sm-6 col-xs-6 add-button-wrapper text-right">
+									<a href="#" class="btn btn-success btn-lg add-button text-center"
+										id="add-task" data-toggle="modal" data-target="#addTaskModal"
+										style="margin-bottom: 20px"><span
+										class="glyphicon glyphicon-plus"></span> </a><!-- <span translate="main.buttons.add"></span> -->
+								</div>
 								<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
 									<p class="well" ng-if="query!=null && query!=''" translate="main.shows.query" translate-values="{query: '{{query}}'}" ></p>
 								</div>
@@ -135,9 +135,9 @@
 							<div class="container" id="task-list-wrapper">
 								<div class="row" id="task-list" ng-repeat="(i,task) in tasks | filter:query" ng-if="$index % 3 == 0">
 									<div class="col-lg-4 col-md-12 col-sm-12 col-xs-12 task-wrapper" ng-repeat="x in [0,1,2]" ng-if="tasks[i + x] != null">
-										<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 task">
-											<div class="row task-header" id="{{tasks[task + x].id}}">
-												<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+										<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 task task-yellow">
+											<div class="row task-header" id="{{tasks[i + x].id}}">
+												<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center">
 													<h4>
 														<span class="task-title" >{{tasks[i + x].title}}</span>
 													</h4>
@@ -145,22 +145,21 @@
 												</div>												
 											</div>
 											<div class="row taskcontent task-content" id="task-content-{{tasks[i + x].id}}">
-												<div class="col-lg-8 col-md-12 col-sm-12 col-xs-12 ">
+												<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center">
 													<small>
 														<span class="glyphicon glyphicon-time "></span>
 														<span class="task-end_date" > {{tasks[i + x].endDate | date: "yyyy-MM-dd"}}</span>
 													</small>
-												</div>
-												<div class="col-lg-4 col-md-12 col-sm-12 col-xs-12 ">
+												
 													<small><span class="glyphicon glyphicon-flash"></span><span class="task-priority"> {{tasks[i + x].priority}}</span></small>
 												</div>
-											  	<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">											  
+											  	<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-justify">											  
 											  		<p class="task-description" ng-bind-html="tasks[i + x].description"></p>
 										    	</div>
 										    	<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
 										    		<div class="row task-tools text-center" id="">
 										    			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-															<small><b class="">Filter by: </b><a class="task-topic" ng-click="filtrarPorTopic(tasks[i + x].topic)" href="#">{{tasks[i + x].topic}},</a></small>
+															<small><b class=""></b><a class="task-topic" ng-click="filtrarPorTopic(tasks[i + x].topic)" href="#">{{tasks[i + x].topic}}</a> | </small>
 															<small><b class=""> </b><a class="task-type"  ng-click="filtrarPorTipo(tasks[i + x].type)" href="#"> {{tasks[i + x].type}}</a></small>
 														</div>
 														<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 btn-tools">
