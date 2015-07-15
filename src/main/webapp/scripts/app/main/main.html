@@ -8,7 +8,7 @@
 								<div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
 									<input type="text"  class="form-control input-lg" id="search" ng-model="query" style="margin-bottom:20px" placeholder="{{'main.filter' | translate}}"/>
 								</div>
-								<div class="col-lg-4 col-md-4 col-sm-6 col-xs-6">
+								<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
 									<a href="#" class="btn btn-warning btn-lg btn-block" ng-click="removeQuery()" style="margin-bottom:20px">
 										<span class="glyphicon glyphicon-erase"></span> <span translate="main.buttons.clear">Clear</span>
 									</a>
@@ -134,7 +134,7 @@
 							
 							<div class="container" id="task-list-wrapper">
 								<div class="row" id="task-list" ng-repeat="(i,task) in tasks | filter:query" ng-if="$index % 3 == 0">
-									<div class="col-lg-4 col-md-12 col-sm-12 col-xs-12 task-wrapper" ng-repeat="x in [0,1,2]" ng-if="tasks[i + x] != null">
+									<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 task-wrapper" ng-repeat="x in [0,1,2]" ng-if="tasks[i + x] != null">
 										<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 task task-yellow">
 											<div class="row task-header" id="{{tasks[i + x].id}}">
 												<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center">
