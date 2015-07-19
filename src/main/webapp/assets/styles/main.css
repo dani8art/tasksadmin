@@ -16,6 +16,52 @@ Hide ng-cloak on page load, https://docs.angularjs.org/api/ng/directive/ngCloak
     display: none !important;
 }
 /* ==========================================================================
+Modal style
+========================================================================== */
+.modal-footer {
+  padding: 15px;
+  padding-top:0px;
+  text-align: right;
+   border-top: 0; 
+}
+.modal-header {
+  min-height: 16.42857143px;
+  padding: 15px;
+  border-bottom: 0px;
+  padding-bottom: 0px;
+}
+.modal-content {
+  position: relative;
+  background-color: #fff;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  border: 1px solid #999;
+  border: 1px solid rgba(0, 0, 0, .2);
+  border-radius: 0px;
+  outline: 0;
+  -webkit-box-shadow: 0 3px 9px rgba(0, 0, 0, .5);
+  box-shadow: 0 3px 9px rgba(0, 0, 0, .5);
+}
+.modal-input{
+  text-align: center;
+  text-transform: uppercase;
+  border: 0;
+  background-color: inherit;
+}
+.modal-required{
+	position: relative;
+  top: -35px;
+  left: 5px;
+  font-size: 24px;
+  color: red;
+  
+  width: 5px;
+  height: 5px;
+}
+.wrapper-input{
+	  height: 35px;
+}
+/* ==========================================================================
 button add style
 ========================================================================== */
 .add-button-wrapper{
@@ -134,6 +180,52 @@ Developement Ribbon
 }
 .nav-pills > li > a {
   border-radius: 0px;
+}
+.navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus {
+   color: #fff;
+  background-color: #72b5f8;
+  border-bottom:2px solid #4361c2;
+}
+.navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus {
+    color: #fff;
+  background-color: #72b5f8;
+  border-bottom:2px solid #4361c2;
+}
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 1000;
+  display: none;
+  float: left;
+  min-width: 200px;
+  padding: 5px 0;
+  margin: 2px 0 0;
+  font-size: 14px;
+  text-align: left;
+  list-style: none;
+  background-color: #4686a0;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  border: 1px solid #4361c2;
+  border: 1px solid rgba(0, 0, 0, .15);
+  border-radius: 4px;
+  -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
+}
+.dropdown-menu > li > a {
+  display: block;
+  padding: 3px 20px;
+  clear: both;
+  font-weight: normal;
+  line-height: 1.42857143;
+  color: #fff;
+  white-space: nowrap;
+}
+.dropdown-menu > li > a:hover, .dropdown-menu > li > a:focus {
+  color: #fff;
+  text-decoration: none;
+  background-color: #72b5f8;
 }
 /* ==========================================================================
 Developement Ribbon

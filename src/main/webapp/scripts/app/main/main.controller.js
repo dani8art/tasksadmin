@@ -119,7 +119,15 @@ angular.module('tasksadminApp')
     	        		$('#description').val($('#description').val()+"<ul>\n<li>item</li>\n</ul>");
     	        	}    	        	
     	        }
-    	        
+    	        $scope.taskColour= function(id){
+    	        	var ret = '';
+    	        	if((id+1)% 2 == 0){
+    	        		ret= 'task-yellow';
+    	        	}else{
+    	        		ret= 'task-blue';
+    	        	}
+    	        	return ret;
+    	        }
            }else{
         	   $state.go("principal");
            }

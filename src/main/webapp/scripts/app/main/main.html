@@ -3,8 +3,8 @@
         <div class="col-md-12">
                 <div >
                    <div class="row" id="content-wrapper">
-						<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" id="content">
-							<div class="row" id="button-add-task-wrapper">
+						<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12"  id="content">
+							<div class="row" id="button-add-task-wrapper ">
 								<div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
 									<input type="text"  class="form-control input-lg" id="search" ng-model="query" style="margin-bottom:20px" placeholder="{{'main.filter' | translate}}"/>
 								</div>
@@ -26,30 +26,39 @@
 									<div class="modal-dialog">
 										<!-- Formulario para añadir task-->
 										<form class="form-horizontal" name="editForm" role="form" novalidate ng-submit="create()" show-validation>
-										    <div class="modal-content">
+										    <div class="modal-content task-yellow">
 										      	<div class="modal-header">
-										        	<button type="button" class="close close-form" ng-click="clear()"><span aria-hidden="true">&times;</span></button>
-										        	<h4 class="modal-title">Add Task</h4>
+										        	<!-- <button type="button" class="close close-form" ng-click="clear()"><span aria-hidden="true">&times;</span></button> -->
+										        	<div class="form-group" style="margin-bottom:0px;">
+														<div class="col-sm-12 wrapper-input">
+															 <input type="text" name="title" class="form-control modal-input"  autocomplete="off" ng-model="task.title" id="title" placeholder="<< Title >>" required>
+															 <span class="modal-required" ng-show="editForm.title.$error.required">*</span>
+														</div>															    	
+													</div>
 										      	</div>
 										      	<div class="modal-body">
 										        	<div class="row" id="input-form-wrapper">
-														<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" id="form">
-															  	<div class="form-group">
-															    	<label for="title" class="col-sm-2 control-label hidden-xs">Title</label>
-															    	<div class="col-sm-10">
-															      		<input type="text" name="title" class="form-control" ng-model="task.title" id="title" placeholder="Title" required>
-															    		<div ng-show="editForm.title.$invalid">
-											                                <p class="help-block"
-											                                   ng-show="editForm.title.$error.required" translate="entity.validation.required">
-											                                    This field is required.
-											                                </p>
-											                            </div>
-															    	</div>															    	
-															  	</div>
+														<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" id="form">															  	
 															  	<div id="form-down">
-																  	<div class="form-group" >
-																    	<label for="description" class="col-sm-2 control-label hidden-xs">Description</label>
-																    	<div class="col-sm-10">
+															  		<div class="form-group">
+																  		<label for="priority" class="col-sm-2 col-xs-4 control-label text-right"><span class="glyphicon glyphicon-time" aria-hidden="true"></span></label>
+																    	<div class="col-sm-4 col-xs-8" style="height: 35px;">	
+																    		<input type="date" name="endDate" ng-model="task.endDate" id="end_date" class="form-control modal-input" placeholder="yyyy-MM-dd" required/>																    		
+												                            <span class="modal-required" ng-show="editForm.endDate.$error.required" >*</span>												                            
+																		</div>
+																		<label for="end_date" class="col-sm-1 col-xs-4 control-label"><span class="glyphicon glyphicon-flash" aria-hidden="true"></span></label>
+																    	<div class="col-sm-4 col-xs-8">	
+																    		<select id="priority" ng-model="task.priority" class="form-control modal-input">
+																		  		<option value="1">1-Extreme Urgency</option>
+																		  		<option value="2">2-Urgency</option>
+																		  		<option value="3" selected="selected">3-Moderate</option>
+																		  		<option value="4">4-Low</option>
+																		  		<option value="5">5-Very Low</option>
+																			</select>																    		
+																		</div>
+																  	</div>
+																  	<div class="form-group" style="height: 290px;">
+																    	<div class="col-sm-12 text-center"> 	
 																    		<div class="btn-toolbar" role="toolbar" style="margin-bottom:5px;" aria-label="tools">
 																    			<div class="btn-group" role="group" aria-label="editor">
 																				  	<button type="button" ng-click="addBlod()" class="btn btn-default blod">
@@ -71,13 +80,13 @@
 																				  	</button>
 																				</div>
 																			</div>
-																      		<textarea rows="10" class="form-control" name="description" ng-model="task.description" ng-maxlength="200" id="description" placeholder="Description" required></textarea>
+																      		<textarea rows="10" class="form-control modal-input" style="text-align:justify;text-transform:none;" name="description" ng-model="task.description" ng-maxlength="200" id="description" placeholder="DESCRIPTION" required></textarea>
 																    		<span>{{task.description.length + ' / ' + '200 characteres.'}}</span>
 																    		<div ng-show="editForm.description.$invalid">
-												                                <p class="help-block"
-												                                   ng-show="editForm.description.$error.required" translate="entity.validation.required">
-												                                    This field is required.
-												                                </p>
+												                                <span class="modal-required" style="top:-40px;"
+												                                   ng-show="editForm.description.$error.required">
+												                                    *
+												                                </span>
 												                                <p class="help-block" ng-show="editForm.description.$error.maxlength">
 												                                    Max length is 200 characteres.
 												                                </p>
@@ -85,36 +94,13 @@
 																    	
 																    	</div>
 																  	</div>
+																  	
 																  	<div class="form-group">
-																  		<label for="priority" class="col-sm-2 col-xs-4 control-label">Priority</label>
-																    	<div class="col-sm-4 col-xs-8">	
-																    		<select id="priority" ng-model="task.priority" class="form-control">
-																		  		<option value="1">1-Extreme Urgency</option>
-																		  		<option value="2">2-Urgency</option>
-																		  		<option value="3" selected="selected">3-Moderate</option>
-																		  		<option value="4">4-Low</option>
-																		  		<option value="5">5-Very Low</option>
-																			</select>
-																		</div>
-																		<label for="end_date" class="col-sm-2 col-xs-4 control-label">End Date</label>
-																    	<div class="col-sm-4 col-xs-8">	
-																    		<input type="date" name="endDate" ng-model="task.endDate" id="end_date" class="form-control" placeholder="yyyy-MM-dd" required/>
-																    		<div ng-show="editForm.endDate.$invalid">
-												                                <p class="help-block"
-												                                   ng-show="editForm.endDate.$error.required" translate="entity.validation.required">
-												                                    This field is required.
-												                                </p>
-												                            </div>
-																		</div>
-																  	</div>
-																  	<div class="form-group">
-																  		<label for="topic" class="col-sm-2 col-xs-4 control-label">Topic</label>
-																    	<div class="col-sm-4 col-xs-8">	
-																    		<input type="text" id="topic" ng-model="task.topic" class="form-control" placeholder="General"/>
-																		</div>
-																		<label for="type" class="col-sm-2 col-xs-4 control-label">Type</label>
-																    	<div class="col-sm-4 col-xs-8">	
-																    		<input type="text" id="type" ng-model="task.type" class="form-control" placeholder="Execute"/>
+																    	<div class="col-sm-6 col-xs-12">	
+																    		<input type="text" id="topic" ng-model="task.topic" class="form-control modal-input" placeholder="Topic"/>
+																		</div>																		
+																    	<div class="col-sm-6 col-xs-12">	
+																    		<input type="text" id="type" ng-model="task.type" class="form-control modal-input" placeholder="Type"/>
 																    		<input type="text" id="id" class="form-control hidden" />
 																		</div>
 																  	</div>
@@ -122,7 +108,7 @@
 														</div>
 													</div>
 										      	</div>
-										      	<div class="modal-footer">
+										      	<div class="modal-footer text-center">
 										        	<button type="button" class="btn btn-danger" ng-click="clear()" data-dismiss="modal"><span class="glyphicon glyphicon-remove-circle"></span> Cancel</button>
 										        	<button  id="save" type="submit" ng-disabled="editForm.$invalid" class="btn btn-primary"><span class="glyphicon glyphicon-floppy-disk"></span> Save task</button>
 										      	</div>
@@ -135,7 +121,7 @@
 							<div class="container" id="task-list-wrapper">
 								<div class="row" id="task-list" ng-repeat="(i,task) in tasks | filter:query" ng-if="$index % 3 == 0">
 									<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 task-wrapper" ng-repeat="x in [0,1,2]" ng-if="tasks[i + x] != null">
-										<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 task task-yellow">
+										<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 task {{taskColour(tasks[i + x].id)}}">
 											<div class="row task-header" id="{{tasks[i + x].id}}">
 												<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center">
 													<h4>
