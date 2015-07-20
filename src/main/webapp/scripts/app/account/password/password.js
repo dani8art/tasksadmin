@@ -11,6 +11,10 @@ angular.module('tasksadminApp')
                     pageTitle: 'global.menu.account.password'
                 },
                 views: {
+                	'navbar@': {
+                        templateUrl: 'scripts/components/navbar/navbar.html',
+                        controller: 'NavbarController'
+                    },
                     'content@': {
                         templateUrl: 'scripts/app/account/password/password.html',
                         controller: 'PasswordController'

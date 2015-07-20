@@ -11,6 +11,10 @@ angular.module('tasksadminApp')
                     pageTitle: 'register.title'
                 },
                 views: {
+                	'navbar@': {
+                        templateUrl: 'scripts/components/navbar/navbar.html',
+                        controller: 'NavbarController'
+                    },
                     'content@': {
                         templateUrl: 'scripts/app/account/register/register.html',
                         controller: 'RegisterController'

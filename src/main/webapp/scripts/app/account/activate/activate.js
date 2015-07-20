@@ -11,6 +11,10 @@ angular.module('tasksadminApp')
                     pageTitle: 'activate.title'
                 },
                 views: {
+                	'navbar@': {
+                        templateUrl: 'scripts/components/navbar/navbar.html',
+                        controller: 'NavbarController'
+                    },
                     'content@': {
                         templateUrl: 'scripts/app/account/activate/activate.html',
                         controller: 'ActivationController'

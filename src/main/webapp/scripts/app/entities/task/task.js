@@ -11,6 +11,10 @@ angular.module('tasksadminApp')
                     pageTitle: 'tasksadminApp.task.home.title'
                 },
                 views: {
+                	'navbar@': {
+                        templateUrl: 'scripts/components/navbar/navbar.html',
+                        controller: 'NavbarController'
+                    },
                     'content@': {
                         templateUrl: 'scripts/app/entities/task/tasks.html',
                         controller: 'TaskController'
@@ -31,6 +35,10 @@ angular.module('tasksadminApp')
                     pageTitle: 'tasksadminApp.task.detail.title'
                 },
                 views: {
+                	'navbar@': {
+                        templateUrl: 'scripts/components/navbar/navbar.html',
+                        controller: 'NavbarController'
+                    },
                     'content@': {
                         templateUrl: 'scripts/app/entities/task/task-detail.html',
                         controller: 'TaskDetailController'

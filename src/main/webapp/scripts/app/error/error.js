@@ -11,6 +11,10 @@ angular.module('tasksadminApp')
                     pageTitle: 'errors.title'
                 },
                 views: {
+                	'navbar@': {
+                        templateUrl: 'scripts/components/navbar/navbar.html',
+                        controller: 'NavbarController'
+                    },
                     'content@': {
                         templateUrl: 'scripts/app/error/error.html'
                     }
@@ -29,6 +33,10 @@ angular.module('tasksadminApp')
                     roles: []
                 },
                 views: {
+                	'navbar@': {
+                        templateUrl: 'scripts/components/navbar/navbar.html',
+                        controller: 'NavbarController'
+                    },
                     'content@': {
                         templateUrl: 'scripts/app/error/accessdenied.html'
                     }

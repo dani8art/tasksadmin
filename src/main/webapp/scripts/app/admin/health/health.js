@@ -11,6 +11,10 @@ angular.module('tasksadminApp')
                     pageTitle: 'health.title'
                 },
                 views: {
+                	'navbar@': {
+                        templateUrl: 'scripts/components/navbar/navbar.html',
+                        controller: 'NavbarController'
+                    },
                     'content@': {
                         templateUrl: 'scripts/app/admin/health/health.html',
                         controller: 'HealthController'

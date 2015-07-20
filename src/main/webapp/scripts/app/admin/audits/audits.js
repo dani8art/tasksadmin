@@ -11,6 +11,10 @@ angular.module('tasksadminApp')
                     pageTitle: 'audits.title'
                 },
                 views: {
+                	'navbar@': {
+                        templateUrl: 'scripts/components/navbar/navbar.html',
+                        controller: 'NavbarController'
+                    },
                     'content@': {
                         templateUrl: 'scripts/app/admin/audits/audits.html',
                         controller: 'AuditsController'
