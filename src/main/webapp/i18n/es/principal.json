@@ -19,7 +19,12 @@
 			"title":"Registro"
 		},
 		"section1":{
-			"title":"¡Sube tus Post-it a la nube! </br> Mueve tus recuerdos a través de Internet."
+			"title":"¡Sube tus Post-it a la nube! </br> Mueve tus recuerdos a través de Internet.",
+			"description":"Task Admin te permite tener tus recordatorios en cualquier momento y en cualquier lugar del mundo. Ademas ofrece facilidad de uso y un diseño intuitivo."
+		},
+		"section2":{
+			"title":"Multi-Dispositivos y Multi-Plataformas, diseño adaptativo.",
+			"description":"Task Admin lets you have your reminders at any time, anywhere in the world. Furthermore it offers ease of use and intuitive design."
 		}		
 	}
 }
