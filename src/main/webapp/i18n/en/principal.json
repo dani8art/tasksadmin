@@ -2,7 +2,13 @@
 	"principal":{
 		"header":{
 			"greating": "Task Admin on Cloud",
-			"description": "Manage your time, plan your tasks and access from anywhere </br> through our cloud-based application."
+			"description": "Manage your time, plan your tasks and access from anywhere </br> through our cloud-based application.",
+			"nav":{
+				"post-it":"Post-it",
+				"design":"Design",
+				"easy":"Easy to use",
+				"top":"Top"
+			}
 		},
 		"login":{
 			"title":"Authentication",
@@ -24,7 +30,26 @@
 		},
 		"section2":{
 			"title":"Multi-Device and Multi-Platform responsive design.",
-			"description":"Task Admin lets you have your reminders at any time, anywhere in the world. Furthermore it offers ease of use and intuitive design."
+			"description":"Manage your Post-it from any device, mobile, tablet, laptop or PC. Always with a interfaces designed to easy to use and accessible from your browser."
+		},
+		"section3":{
+			"title":"Easy to use.",
+			"description":"Our goal is that use Task Admin will become as easy as writing a Post-it.",
+			"create":{
+				"title":"Create a Post-it.",
+				"description":"Watch this video and see how easy it is to create a task in Task Admin. Click on green button and enter your Post-it."
+			},
+			"edit":{
+				"title":"Edit your Post-it.",
+				"description":"Editing a post-it is as simple as clicking a button. Watch this video and see how."
+			},
+			"complete":{
+				"title":"Complete your task.",
+				"description":"When you finish a task you can take for completed work and remove the post-it. Click on completed button and ready."
+			}
+		},
+		"buttons":{
+			"more":"More"
 		}
 	}
 }

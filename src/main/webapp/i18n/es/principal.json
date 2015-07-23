@@ -2,7 +2,13 @@
 	"principal":{
 		"header":{
 			"greating":"Task Admin on Cloud",
-			"description":"Gestiona tu tiempo, planifica tus tareas y accede desde cualquier parte </br> a través de nuestra aplicación basada en la nube."
+			"description":"Gestiona tu tiempo, planifica tus tareas y accede desde cualquier parte </br> a través de nuestra aplicación basada en la nube.",
+			"nav":{
+				"post-it":"Post-it",
+				"design":"Diseño",
+				"easy":"Fácil uso",
+				"top":"TOP"
+			}
 		},
 		"login":{
 			"title":"Autenticatión",
@@ -24,7 +30,26 @@
 		},
 		"section2":{
 			"title":"Multi-Dispositivos y Multi-Plataformas diseño adaptativo.",
-			"description":"Task Admin lets you have your reminders at any time, anywhere in the world. Furthermore it offers ease of use and intuitive design."
+			"description":"Gestiona tus Post-it desde cualquier dispositivo, móvil, tablet, portátil o PC. Siempre con una interfaz orientada a un uso sencillo y desde tu navegador preferido."
+		},
+		"section3":{
+			"title":"Fácil uso.",
+			"description":"Nuestro objetivo es que usar Task Admin sea tan fácil como escribir un Post-it.",
+			"create":{
+				"title":"Crear un Post-it.",
+				"description":"Mira este video y comprueba como de fácil es crear una tarea en Task Admin. Haz click en el boton verde y escribe tu Post-it."
+			},
+			"edit":{
+				"title":"Editar tus Post-it.",
+				"description":"Editar un post-it resulta tan sencillo como hacer clic en un botón. Mira este video y comprueba como."
+			},
+			"complete":{
+				"title":"Completa tus tareas.",
+				"description":"Cuando terminas una tarea puedes dar por completado el trabajo y quitar el Post-it. Haz clic en el botón completar y listo."
+			}
+		},
+		"buttons":{
+			"more":"Más"
 		}		
 	}
 }

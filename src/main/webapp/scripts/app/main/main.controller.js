@@ -123,6 +123,9 @@ angular.module('tasksadminApp')
     	        	}
     	        	return ret;
     	        }
+    	        $scope.focusedTitle = function(){
+    	        	angular.element('[ng-model="task.title"]').focus();
+    	        }
            }else{
         	   $state.go("principal");
            }

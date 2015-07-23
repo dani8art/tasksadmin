@@ -1,4 +1,12 @@
 <!-- Header -->
+		<div class="nav">
+			<ul class="nav-inner"> 
+				<li><a href="#one" class="scrolly" translate="principal.header.nav.post-it">Post-it</a></li>
+				<li><a href="#two" class="scrolly" translate="principal.header.nav.design">Design</a></li>
+				<li><a href="#three" class="scrolly" translate="principal.header.nav.easy">Easy to use</a></li>
+				<li><a href="#top" class="scrolly" translate="principal.header.nav.top">Top</a></li>
+			</ul>
+		</div>
 			<section id="header">
 				<div class="inner">
 					<span class="icon major fa-cloud"></span>
@@ -51,32 +59,32 @@
 			<section id="three" class="main style1 special">
 				<div class="container">
 					<header class="major">
-						<h2>Adipiscing amet consequat</h2>
+						<h2 translate="principal.section3.title">Easy to use.</h2>
 					</header>
-					<p>Ante nunc accumsan et aclacus nascetur ac ante amet sapien sed.</p>
+					<p translate="principal.section3.description">Our goal is that use Task Admin will become as easy as writing a Post-it.</p>
 					<div class="row 150%">
 						<div class="4u 12u$(medium)">
-							<span class="image fit"><img src="images/pic02.jpg" alt="" /></span>
-							<h3>Magna feugiat lorem</h3>
-							<p>Adipiscing a commodo ante nunc magna lorem et interdum mi ante nunc lobortis non amet vis sed volutpat et nascetur.</p>
+							<iframe class="image fit" style="min-height:219px;" src="https://www.youtube.com/embed/VHM3BQ-JgVc" frameborder="0" allowfullscreen></iframe>
+							<h3 translate="principal.section3.create.title">Create a Post-it</h3>
+							<p translate="principal.section3.create.description">Watch this video and see how easy it is to create a task in Task Admin. Click on green button and enter your Post-it.</p>
 							<ul class="actions">
-								<li><a href="#" class="button">More</a></li>
+								<li><a href="#" class="button" translate="principal.buttons.more">More</a></li>
 							</ul>
 						</div>
 						<div class="4u 12u$(medium)">
-							<span class="image fit"><img src="images/pic03.jpg" alt="" /></span>
-							<h3>Magna feugiat lorem</h3>
-							<p>Adipiscing a commodo ante nunc magna lorem et interdum mi ante nunc lobortis non amet vis sed volutpat et nascetur.</p>
+							<iframe class="image fit" style="min-height:219px;" src="https://www.youtube.com/embed/oCi7bnEDTmI" frameborder="0" allowfullscreen></iframe>
+							<h3 translate="principal.section3.edit.title">Edit your Post-it</h3>
+							<p translate="principal.section3.edit.description">Editing a post-it is as simple as clicking a button. Watch this video and see how.</p>
 							<ul class="actions">
-								<li><a href="#" class="button">More</a></li>
+								<li><a href="#" class="button" translate="principal.buttons.more">More</a></li>
 							</ul>
 						</div>
 						<div class="4u$ 12u$(medium)">
-							<span class="image fit"><img src="images/pic04.jpg" alt="" /></span>
-							<h3>Magna feugiat lorem</h3>
-							<p>Adipiscing a commodo ante nunc magna lorem et interdum mi ante nunc lobortis non amet vis sed volutpat et nascetur.</p>
+							<iframe class="image fit" style="min-height:219px;" src="https://www.youtube.com/embed/RNy6tsSw2oI" frameborder="0" allowfullscreen></iframe>
+							<h3 translate="principal.section3.complete.title">Complete your tasks</h3>
+							<p translate="principal.section3.complete.description">Editing a post-it is as simple as clicking a button. Watch this video and see how.</p>
 							<ul class="actions">
-								<li><a href="#" class="button">More</a></li>
+								<li><a href="#" class="button" translate="principal.buttons.more">More</a></li>
 							</ul>
 						</div>
 					</div>
@@ -104,7 +112,7 @@
 					                           ng-model="password">
 					                </div>
 					                <div class="6u 12u$(small)">
-										<input type="checkbox" id="rememberme" name="rememberme" ng-model="rememberMe">
+										<input type="checkbox" id="rememberme" name="rememberme" ng-model="rememberMe" checked>
 										<label for="rememberme" translate="principal.login.remember" style="color:#fff">Remember me</label>
 									</div>				 
 				           			<div class="12u$">

@@ -33,6 +33,17 @@ angular.module('tasksadminApp')
                     });
                 };
         		$('.scrolly').scrolly();
+        		
+        		$(document).scroll(function () {
+        			var scroll = $(this).scrollTop();
+        	        var topDist = $(".nav").position();
+        	        if (scroll > topDist.top + 70) {
+        	            $('div.nav').css({"position":"fixed","top":"0","background-image":"linear-gradient(45deg, #9dc66b 5%, #4fa49a 30%, #4361c2)"});   
+        	            
+        	        } else if (scroll < topDist.top + 70){
+        	            $('div.nav').css({"position":"absolute","top":"auto","background-image":"none"});
+        	        }
+        		});
         	}
         }).catch(function(){
         	$scope.login = function () {

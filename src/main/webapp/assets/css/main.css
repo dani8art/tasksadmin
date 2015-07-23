@@ -6,6 +6,32 @@
 	html5up.net | @n33co
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
+.nav{
+	position:absolute;
+	width: 100%;
+	z-index:3000;
+	color:#fff;	
+	padding:20px 0px;
+}
+.nav-inner{
+	margin:0px;
+	list-style: none;
+	text-align:center;
+	padding:0px;
+}
+.nav-inner li{
+	display:inline !important;
+	/*margin:0px 20px;*/
+}
+.nav-inner > li > a{
+	text-decoration:none;
+	border: 0;
+  	padding: 22px 22px;
+  	text-transform: uppercase;
+}
+.nav-inner > li > a:hover{
+	background-color: rgba(0,0,0,0.1);
+}
 
 /* Reset */
 
@@ -3354,7 +3380,7 @@
 		/* Main */
 
 			.main {
-				padding: 2em 1.5em 0.1em 1.5em ;
+				padding: 4em 1.5em 0.1em 1.5em ;
 			}
 
 		/* Header */
