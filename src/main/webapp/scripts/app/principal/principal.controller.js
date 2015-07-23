@@ -13,7 +13,7 @@ angular.module('tasksadminApp')
         		$('#main').remove();
         		var check =$('#homestyle').attr("rel");
         		if(!check){
-        			$('head').append('<link id="homestyle" rel="stylesheet" href="assets/style/principal.css" />');
+        			$('head').append('<link id="homestyle" rel="stylesheet" href="assets/styles/principal.css" />');
         		}
         		$scope.login = function () {
                     Auth.login({
