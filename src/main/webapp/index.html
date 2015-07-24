@@ -7,12 +7,12 @@
 		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
 		<!-- build:css assets/styles/vendor.css -->
         <!-- bower:css -->
-        <link id="bootstrap" rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" /> 
+        <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
         <!-- endbower -->
         <!-- endbuild -->
 		<!-- build:css assets/styles/main.css -->
-		<link id="main" rel="stylesheet" href="assets/styles/main.css">
 		<link id="homestyle" rel="stylesheet" href="assets/styles/principal.css" />
+		<link id="main" rel="stylesheet" href="assets/styles/main.css">
 		<!-- endbuild -->
 	</head>
 	<body ng-app="tasksadminApp" id="top">
@@ -52,10 +52,6 @@
         <script src="bower_components/angular-local-storage/dist/angular-local-storage.js"></script>
         <script src="bower_components/angular-cache-buster/angular-cache-buster.js"></script>
         <script src="bower_components/ngInfiniteScroll/build/ng-infinite-scroll.js"></script>
-        <script src="scripts/js/jquery.scrolly.min.js"></script>
-		<script src="scripts/js/skel.min.js"></script>
-		<script src="scripts/js/util.js"></script>
-		<script src="scripts/js/main.js"></script>
         <!-- endbower -->
         <!-- endbuild -->		
 
@@ -125,6 +121,11 @@
         <script src="scripts/app/entities/task/task.controller.js"></script>
         <script src="scripts/app/entities/task/task-detail.controller.js"></script>
         <script src="scripts/components/entities/task/task.service.js"></script>
+        
+        <script src="scripts/js/jquery.scrolly.min.js"></script>
+		<script src="scripts/js/skel.min.js"></script>
+		<script src="scripts/js/util.js"></script>
+		<script src="scripts/js/main.js"></script>
         <!-- endbuild -->
 	</body>
 </html>
