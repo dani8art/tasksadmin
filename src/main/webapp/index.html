@@ -4,14 +4,16 @@
 		<title>Tasks Admin</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
-		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
-		
-		<!--<link id="homestyle" rel="stylesheet" href="assets/css/main.css" />
-		<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" /> 
-		<link id="main" rel="stylesheet" href="assets/styles/main.css">-->
-		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
-		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
-		
+		<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+        <!-- build:css assets/styles/vendor.css -->
+        <link id="bootstrap" rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+        <link id="main" rel="stylesheet" href="assets/styles/main.css">
+        <!-- bower:css -->
+        <!-- endbower -->
+        <!-- endbuild -->
+        <!-- build:css assets/styles/main.css -->
+        <link id="homestyle" rel="stylesheet" href="assets/css/main.css" />
+        <!-- endbuild -->
 	</head>
 	<body ng-app="tasksadminApp" id="top">
 		<!--  <div ng-show="{{ENV === 'dev'}}" class="development" ng-cloak=""></div>-->
@@ -50,14 +52,13 @@
         <script src="bower_components/angular-local-storage/dist/angular-local-storage.js"></script>
         <script src="bower_components/angular-cache-buster/angular-cache-buster.js"></script>
         <script src="bower_components/ngInfiniteScroll/build/ng-infinite-scroll.js"></script>
+        <script src="assets/js/jquery.scrolly.min.js"></script>
+		<script src="assets/js/skel.min.js"></script>
+		<script src="assets/js/util.js"></script>
+		<script src="assets/js/main.js"></script>
         <!-- endbower -->
         <!-- endbuild -->
-        <!-- Scripts REESTRUCTURAR Y LLEVAR AL PRINCIPAL CONTROLLER -->
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/skel.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
-			<script src="assets/js/main.js"></script>
+			
 		
 
         <!-- build:js({.tmp,src/main/webapp}) scripts/app.js -->
