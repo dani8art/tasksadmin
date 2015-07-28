@@ -8,6 +8,20 @@ body {
 .footer{
 	
 }
+.caret {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    margin-left: 2px;
+    vertical-align: middle;
+    border-top: 4px solid;
+    border-right: 4px solid transparent;
+    border-left: 4px solid transparent;
+    color: #fff;
+}
+p{
+	font-size: 15px;
+}
 /* ==========================================================================
 Hide ng-cloak on page load, https://docs.angularjs.org/api/ng/directive/ngCloak
 ========================================================================== */
@@ -144,6 +158,11 @@ Task style
 /* ==========================================================================
 Developement Ribbon
 ========================================================================== */
+.nav > li {
+    position: relative;
+    display: block;
+    padding-left: 0px;
+}
 .navbar-default{
 	background-color: #4686a0;
 	border-bottom:1px solid #4361c2;
@@ -155,6 +174,8 @@ Developement Ribbon
 }
 .navbar-default .navbar-brand {
   color: #fff;
+  transition: none; 
+  border-bottom: none;
 }
 .navbar-version {
   font-size: 10px;
@@ -176,6 +197,8 @@ Developement Ribbon
 }
 .navbar-default .navbar-nav > li > a {
   color: #fff;
+  border-bottom: none;
+  font-size: 14px;
 }
 .nav-pills > li > a {
   border-radius: 0px;
@@ -212,6 +235,9 @@ Developement Ribbon
   -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
   box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
 }
+.dropdown-menu > li{
+	padding-left:0px;
+}
 .dropdown-menu > li > a {
   display: block;
   padding: 3px 20px;
@@ -220,6 +246,11 @@ Developement Ribbon
   line-height: 1.42857143;
   color: #fff;
   white-space: nowrap;
+      -moz-transition: none;
+    -webkit-transition: none;
+    -ms-transition: none;
+    transition: none;
+    border-bottom: none;
 }
 .dropdown-menu > li > a:hover, .dropdown-menu > li > a:focus {
   color: #fff;

@@ -11,7 +11,7 @@ angular.module('tasksadminApp')
                     // retrieve the logged account information
                     Principal.identity(true).then(function(account) {
                         // After the login the language will be changed to
-                        // the language selected by the user during his registration
+                        // the language selected by the user during his registration          
                         $translate.use(account.langKey);
                         deferred.resolve(data);
                     });
