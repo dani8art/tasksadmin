@@ -16,6 +16,38 @@ Hide ng-cloak on page load, https://docs.angularjs.org/api/ng/directive/ngCloak
     display: none !important;
 }
 /* ==========================================================================
+navbar
+========================================================================== */
+.nav-principal{
+	width: 100%;
+	z-index:3000;
+	color:#fff;	
+	padding:20px 0px;
+	position:fixed;
+	top:0;
+	background-image:linear-gradient(45deg, #9dc66b 5%, #4fa49a 30%, #4361c2);
+}
+.nav-inner-principal{
+	margin:0px;
+	list-style: none;
+	text-align:center;
+	padding:0px;
+}
+.nav-inner-principal li{
+	display:inline !important;
+	/*margin:0px 20px;*/
+}
+.nav-inner-principal > li > a{
+	text-decoration:none;
+	border: 0;
+  	padding: 22px 22px;
+  	text-transform: uppercase;
+  	color:#fff;
+}
+.nav-inner-principal > li > a:hover{
+	background-color: rgba(0,0,0,0.1);
+}
+/* ==========================================================================
 Modal style
 ========================================================================== */
 .modal-footer {
