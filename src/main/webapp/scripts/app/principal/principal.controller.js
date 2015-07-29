@@ -9,12 +9,7 @@ angular.module('tasksadminApp')
         	if($scope.isAuthenticated()){
         		$state.go("home");	        
         	}else{
-        		$('#bootstrap').remove();
-        		$('#main').remove();
-        		var check =$('#homestyle').attr("rel");
-        		if(!check){
-        			$('head').append('<link id="homestyle" rel="stylesheet" href="assets/css/main.css" />');
-        		}
+        		
         		$scope.login = function () {
                     Auth.login({
                         username: $scope.username,
@@ -36,12 +31,12 @@ angular.module('tasksadminApp')
         		
         		$(document).scroll(function () {
         			var scroll = $(this).scrollTop();
-        	        var topDist = $(".nav").position();
+        	        var topDist = $(".nav-principal").position();
         	        if (scroll > topDist.top + 70) {
-        	            $('div.nav').css({"position":"fixed","top":"0","background-image":"linear-gradient(45deg, #9dc66b 5%, #4fa49a 30%, #4361c2)"});   
+        	            $('div.nav-principal').css({"background-image":"linear-gradient(45deg, #9dc66b 5%, #4fa49a 30%, #4361c2)"});   
         	            
         	        } else if (scroll < topDist.top + 70){
-        	            $('div.nav').css({"position":"absolute","top":"auto","background-image":"none"});
+        	            $('div.nav-principal').css({"background-image":"none"});
         	        }
         		});
         	}
