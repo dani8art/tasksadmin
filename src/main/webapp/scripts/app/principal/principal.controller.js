@@ -8,7 +8,7 @@ angular.module('tasksadminApp')
         }).then(function(){
         	if($scope.isAuthenticated()){
         		$state.go("home");	        
-        	}else{
+        	}else{        		
         		
         		$scope.login = function () {
                     Auth.login({

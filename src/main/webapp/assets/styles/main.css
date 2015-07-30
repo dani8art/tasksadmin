@@ -9,6 +9,9 @@ body {
 .footer{
 	
 }
+.lead{
+	font-size: 19px;
+}
 /* ==========================================================================
 Hide ng-cloak on page load, https://docs.angularjs.org/api/ng/directive/ngCloak
 ========================================================================== */
@@ -16,13 +19,96 @@ Hide ng-cloak on page load, https://docs.angularjs.org/api/ng/directive/ngCloak
     display: none !important;
 }
 /* ==========================================================================
+sections
+========================================================================== */
+.main{
+	padding: 120px 0px 100px;
+}
+
+.style1{
+	background-color: #fff;
+}
+.style1 p{
+	color:rgba(70, 70, 70, 0.80);
+}
+.style1 a:hover{
+	background:rgba(255,255,255,.75)
+}
+.style2 {
+    background-color: #333;
+    color: rgba(255,255,255,.75);
+    background-attachment: fixed,fixed;
+    background-image: url(../images/overlay1.png),url(../../images/header.jpg);
+    background-size: auto,cover;
+}
+.style2 header{
+	color:#fff;
+}
+.style2 header.major::after {
+	background:#fff;
+}
+.style2 a{
+	color:#fff;
+}
+.style2 a:hover{
+	color:rgba(255,255,255,.75);
+}
+#three{
+	padding-top:85px;
+}
+#three p{
+	margin-bottom:35px;
+}
+#four{
+	padding-top:85px;
+}
+#rememberme{
+	margin: 12px 0px;
+}
+header.major::after {
+    background: rgba(144, 144, 144, 0.498039);
+    content: "";
+    display: inline-block;
+    height: 1px;
+    margin-top: 1.5em;
+    margin-bottom:1.5em;
+    width: 6em;
+}
+input.button.special{
+	color:#fff;
+}
+input.button.special:hover{
+	background: rgba(200, 200, 200, 0.498039);
+}
+#footer {
+    padding: 7em 0;
+    background-color: #4686a0;
+    color: rgba(255,255,255,.75);
+    background-attachment: fixed,fixed,fixed;
+    background-image: url(../images/overlay2.png),url(../images/overlay4.svg),linear-gradient(45deg,#4361c2,#4fa49a 50%,#9dc66b 95%);
+    background-position: top left,center center,center center;
+    background-size: auto,cover,cover;
+}
+#footer, #header {
+    text-align: center;
+}
+.social, .copy {
+	list-style: none;
+}
+.social li, .copy li{
+	display:inline;
+}
+.actions a.button:hover{
+	text-decoration:none;
+}
+/* ==========================================================================
 header principal
 ========================================================================== */
 #header{
 	padding: 40px 0;
-	padding-top: 195px;
+	padding-top: 160px;
     background-color: #fff;
-    color: rgba(255,255,255,.75);
+    color: #fff ;
     background-attachment: fixed,fixed,fixed;
     background-image: url(../images/overlay2.png),url(../images/overlay3.svg),linear-gradient(45deg,#9dc66b 5%,#4fa49a 30%,#4361c2);
     background-position: top left,center center,center center;
@@ -39,9 +125,16 @@ header principal
 	padding-left: 0px;
 	margin: 2.5em 0 0;
 }
-#header .button{
+#header .button {
     box-shadow: inset 0 0 0 1px #fff;
     color: #fff!important;
+    width: 10%;
+    height: 45px;
+    padding-top: 0px;
+    text-decoration:none;
+}
+#header .button:hover {
+    background-color:rgba(255,255,255,.125);
 }
 .button {
     -moz-appearance: none;
@@ -56,10 +149,10 @@ header principal
     border-radius: 4px;
     border: 0;
     box-shadow: inset 0 0 0 1px rgba(144,144,144,.5);
-    color: #555!important;
+    color: #555;
     cursor: pointer;
     display: inline-block;
-    font-size: .9em;
+    font-size: 1.2em;
     font-weight: 400;
     height: 2.75em;
     letter-spacing: .125em;
@@ -76,7 +169,7 @@ header principal
     height: 100vh;
     left: 50%;
     position: absolute;
-    top: 100%;
+    /*top: 100%;*/
     width: 1px;
 }
 #header .actions:after, #header:after {
