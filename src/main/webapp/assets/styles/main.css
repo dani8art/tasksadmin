@@ -301,6 +301,9 @@ Task style
 	background-position: center;
 	background-repeat: no-repeat;*/
 	margin-bottom: 20px;
+	float:none;
+	display:inline-flex;
+	display: -webkit-inline-flex;
 }
 .task-description{
 	margin-top:15px;
