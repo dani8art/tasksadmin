@@ -115,7 +115,7 @@ header principal
     background-size: auto,cover,cover;
     overflow: hidden;
     margin-top:-70px;
-    min-height: 700px;
+    height: 100vh;
 }
 #header .glyphicon{
 	font-size:90px;
@@ -164,17 +164,17 @@ header principal
     text-transform: uppercase;
     white-space: nowrap;
 }
-#header .actions:after {
+/* #header .actions:after {
     background: #fff;
     height: 100vh;
     left: 50%;
     position: absolute;
-    /*top: 100%;*/
+    top: 100%;
     width: 1px;
 }
 #header .actions:after, #header:after {
     content: '';
-}
+} */
 /* ==========================================================================
 navbar
 ========================================================================== */
