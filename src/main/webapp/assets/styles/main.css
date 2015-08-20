@@ -3,7 +3,8 @@ body {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     color: #333;
     padding-top: 70px;
-    background-image: url(../images/corkboard.png);
+    /*background-image: url(../images/corkboard.png);*/
+    background-color: #eee;
 	background-repeat: repeat;
 }
 .footer{
@@ -21,6 +22,9 @@ Hide ng-cloak on page load, https://docs.angularjs.org/api/ng/directive/ngCloak
 /* ==========================================================================
 sections
 ========================================================================== */
+.container-tasks{
+	margin: 0px 30px;
+}
 .main{
 	padding: 120px 0px 100px;
 }
@@ -115,7 +119,7 @@ header principal
     background-size: auto,cover,cover;
     overflow: hidden;
     margin-top:-70px;
-    height: 100vh;
+    min-height: 700px;
 }
 #header .glyphicon{
 	font-size:90px;
@@ -164,20 +168,23 @@ header principal
     text-transform: uppercase;
     white-space: nowrap;
 }
-/* #header .actions:after {
+#header .actions:after {
     background: #fff;
-    height: 100vh;
+    height: 70vh;
     left: 50%;
     position: absolute;
-    top: 100%;
+    /* top: 100%;*/
     width: 1px;
 }
 #header .actions:after, #header:after {
     content: '';
-} */
+} 
 /* ==========================================================================
 navbar
 ========================================================================== */
+.container-nav{
+	padding: 0px 20px;
+}
 .user {
 	background-image: url(../images/default.png);
     background-size: 100% 100%;
@@ -290,7 +297,7 @@ Task style
 	padding-top:5px;
 }
 .task-yellow{
-	border: 1px solid #F7FE2E /*#F3F781*/;
+	border: 1px solid #DDDFA1 /*#F3F781*/;
   	background-color: #F2F5A9 ;
 }
 .task-blue{
