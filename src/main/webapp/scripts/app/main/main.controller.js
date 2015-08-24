@@ -9,10 +9,10 @@ angular.module('tasksadminApp')
         	
         	if($scope.isAuthenticated()){
         		$scope.showMenu = function(){
-        			$("#removequery").removeClass("hidden");
+        			$("#menu-show").removeClass("hidden");
         		}
         		$scope.hideMenu = function(){
-        			$("#removequery").addClass("hidden");
+        			$("#menu-show").addClass("hidden");
         		}
         		
         		$scope.user = User.get({login:$scope.account.login})

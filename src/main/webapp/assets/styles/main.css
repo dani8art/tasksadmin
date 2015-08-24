@@ -182,6 +182,13 @@ header principal
 /* ==========================================================================
 navbar
 ========================================================================== */
+#float-menu{
+	background-color: #000;
+	position:fixed;
+	bottom:105px;
+	right:25px;
+	margin:0px;
+}
 .container-nav{
 	padding: 0px 20px;
 }
