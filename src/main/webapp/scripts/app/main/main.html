@@ -4,15 +4,17 @@
                 <div >
                    <div class="row" id="content-wrapper">
 						<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12"  id="content">
-							<div class="row" id="float-menu" ng-mouseleave="hideMenu()">
-								<div class="row hidden" id="menu-show">
-									<div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
-										<input type="text"  class="form-control input-lg" id="search" ng-model="query" style="margin-bottom:20px" placeholder="{{'main.filter' | translate}}"/>
-									</div>
-									<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
-										<a href="#" id="removequery" class="btn btn-warning btn-lg btn-block " ng-click="removeQuery()" style="margin-bottom:20px">
-											<span class="glyphicon glyphicon-erase"></span> <span translate="main.buttons.clear">Clear</span>
-										</a>
+							<div class="row" id="float-menu" ng-mouseleave="hideMenu()"><!--  -->
+								<div class="row" id="menu-show">
+									<div  id="search-wrapper">
+										<div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+											<input type="text"  class="form-control" id="search" ng-model="query" style="margin-bottom:20px" placeholder="{{'main.filter' | translate}}"/>
+										</div>
+										<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+											<a href="#" id="removequery" class="btn btn-warning  btn-block " ng-click="removeQuery()" style="margin-bottom:20px">
+												<span class="glyphicon glyphicon-erase"></span>
+											</a>
+										</div>
 									</div>
 								</div>
 								<div class="col-lg-2 col-md-2 col-sm-6 col-xs-6 add-button-wrapper text-right">
@@ -21,13 +23,16 @@
 											style="margin-bottom: 20px"
 											ng-mouseover="showMenu()"
 											><span
-											class="glyphicon glyphicon-plus"></span> </a><!-- <span translate="main.buttons.add"></span> -->
+											class="glyphicon glyphicon-pencil"></span> </a>
 								</div>
 							</div>
 							<div class="row" id="button-add-task-wrapper ">
 								
 								<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-									<p class="alert alert-success" ng-if="query!=null && query!=''" translate="main.shows.query" translate-values="{query: '{{query}}'}" ></p>
+									<p class="alert alert-success" ng-if="query!=null && query!=''" >
+										<span translate="main.shows.query" translate-values="{query: '{{query}}'}" ></span>
+										<a href="#" class="" ng-click="removeQuery()"> Remove filter</a>
+									</p>
 								</div>
 								<div class="modal fade" id="addTaskModal" tabindex="-1" role="dialog" aria-labelledby="addTaskModal" aria-hidden="true">
 									<div class="modal-dialog">

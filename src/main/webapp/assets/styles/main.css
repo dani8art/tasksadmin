@@ -4,7 +4,7 @@ body {
     color: #333;
     padding-top: 70px;
     /*background-image: url(../images/corkboard.png);*/
-    background-color: #eee;
+    background-color: #E5E4E2;
 	background-repeat: repeat;
 }
 .footer{
@@ -182,12 +182,36 @@ header principal
 /* ==========================================================================
 navbar
 ========================================================================== */
+#menu-show{
+	transition:opacity 0.3s;
+	-webkit-transition:opacity 0.3s;
+	-moz-transition:opacity 0.3s;
+	opacity:0;
+}
+#menu-show.show{
+	opacity:1;
+}
+#search-wrapper input{
+	margin-top: 4px;
+	box-shadow: 0 0 4px rgba(0,0,0,.14),0 4px 8px rgba(0,0,0,.28);
+}
+#search-wrapper a{
+	border-radius: 50%;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    line-height: 2.3;
+    border: 1px solid #C08A3F;
+    box-shadow: 0 0 4px rgba(0,0,0,.14),0 4px 8px rgba(0,0,0,.28);
+}
 #float-menu{
-	background-color: #000;
+	/*background-color: #000;*/
 	position:fixed;
 	bottom:105px;
 	right:25px;
 	margin:0px;
+	z-index:1000;
 }
 .container-nav{
 	padding: 0px 20px;
@@ -286,15 +310,16 @@ button add style
 	 z-index: 1030;
 }
 .add-button{
-	 border-radius: 50%;
-  width: 65px;
-  height: 65px;
-  /* line-height: 0; */
-  font-size: 22px;
-  /* vertical-align: middle; */
+	border-radius: 50%;
+	border: 1px solid #488948;
+  	width: 65px;
+  	height: 65px;
+  	/* line-height: 0; */
+  	font-size: 22px;
+  	/* vertical-align: middle; */
     padding-top: 19px;
-  padding-left: 19px;
-  box-shadow: 0 0 4px rgba(0,0,0,.14),0 4px 8px rgba(0,0,0,.28);
+  	padding-left: 19px;
+  	box-shadow: 0 0 4px rgba(0,0,0,.14),0 4px 8px rgba(0,0,0,.28);
 }
 /* ==========================================================================
 Task style
