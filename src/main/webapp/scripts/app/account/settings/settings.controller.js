@@ -7,7 +7,7 @@ angular.module('tasksadminApp')
         Principal.identity().then(function(account) {
             $scope.settingsAccount = account;
         });
-
+        $scope.logout = Auth.logout;
         $scope.save = function () {
             Auth.updateAccount($scope.settingsAccount).then(function() {
                 $scope.error = null;

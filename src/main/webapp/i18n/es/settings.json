@@ -1,7 +1,7 @@
 {
     "settings": {
     	"gohome":"Ir al panel de tareas",
-        "title": "User settings for [<b>{{username}}</b>]",
+        "title": "Perfil de usuario, <b>{{username}}</b>",
         "form": {
             "firstname": "First Name",
             "firstname.placeholder": "Your first name",

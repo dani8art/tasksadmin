@@ -13,8 +13,8 @@
 		"login":{
 			"title":"Autenticatión",
 			"placeholders":{
-				"login":"Tu Login",
-				"password":"Tu Password"
+				"login":"Tu login",
+				"password":"Tu password"
 			},
 			"remember":"Recordar credenciales",
 			"error": {

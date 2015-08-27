@@ -13,8 +13,8 @@
 		"login":{
 			"title":"Authentication",
 			"placeholders":{
-				"login":"Your Login",
-				"password":"Your Password"
+				"login":"Your login",
+				"password":"Your password"
 			},
 			"remember":"Remember me",
 			"error": {

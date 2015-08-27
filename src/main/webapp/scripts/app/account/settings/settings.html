@@ -1,29 +1,29 @@
 <div class="container">
     <div class="row">
         <div class="col-md-12">
-        	<a ui-sref="home" class="btn btn-success ">
-                <span class="glyphicon glyphicon-arrow-left"></span>
-                <span translate="settings.gohome">Go to Tasks Panel</span>
-            </a><br>
-        	<!--<li ng-class="{active: $state.includes('account')}" class="dropdown pointer">
-                 
-                    <ul class="dropdown-menu">
-                        <li ui-sref-active="active" ng-switch-when="true"><a ui-sref="settings"><span class="glyphicon glyphicon-wrench"></span>
-                            &#xA0;<span translate="global.menu.account.settings">Settings</span></a></li>
-                        <li ui-sref-active="active" ng-switch-when="true"><a ui-sref="password"><span class="glyphicon glyphicon-lock"></span>
-                            &#xA0;<span translate="global.menu.account.password">Password</span></a></li>
-                        <li ui-sref-active="active" ng-switch-when="true"><a href="" ng-click="logout()"><span class="glyphicon glyphicon-log-out"></span>
-                            &#xA0;<span translate="global.menu.account.logout">Log out</span></a></li>
-                    </ul>
-                </li>-->
-        	settings - Password - Log out
-        	<div ng-controller="LanguageController">
-	        	<p active-menu="{{language}}" ng-repeat="language in languages">
-	                  <a href="" ng-click="changeLanguage(language)">{{'language.' + language| translate}}</a>
-	            </p>
+	        <div class="row">
+	        	<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+		        	<a ui-sref="home" class="btn btn-success ">
+		                <span class="glyphicon glyphicon-arrow-left"></span>
+		                <span translate="settings.gohome">Go to Tasks Panel</span>
+		            </a>
+		            <a href="" class="btn btn-danger" ng-click="logout()"><span class="glyphicon glyphicon-log-out"></span>
+                            &#xA0;<span translate="global.menu.account.logout">Log out</span></a>
+		        </div>
 	        </div>
-        	
-            <h2 translate="settings.title" translate-values="{username: '{{settingsAccount.login}}'}">User settings</h2>
+	        <div class="row">
+	        	<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center">
+	        		<h2 translate="settings.title" translate-values="{username: '{{settingsAccount.login}}'}">User settings</h2>
+	        		<div ng-controller="LanguageController">		        	
+			            <a href="" style="text-decoration: none;"  ng-repeat="language in languages" ng-click="changeLanguage(language)">
+			            	<span class="bandera-{{language}}"></span>
+			            </a>		            
+			        </div>        	
+	        	</div>
+	        </div>	
+        	<!-- <li ui-sref-active="active" ng-switch-when="true"><a ui-sref="password"><span class="glyphicon glyphicon-lock"></span>
+                            &#xA0;<span translate="global.menu.account.password">Password</span></a></li>
+                  >-->      
 
             <div class="alert alert-success" ng-show="success" translate="settings.messages.success">
                 <strong>Settings saved!</strong>
