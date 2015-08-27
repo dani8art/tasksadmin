@@ -180,8 +180,40 @@ header principal
     content: '';
 } 
 /* ==========================================================================
+alerts
+========================================================================== */
+#alerts-wrapper{
+	position: fixed;
+    top: 10px;
+    right: 10px;
+	z-index:1040;
+}
+@media (max-width: 767px){
+	#alerts-wrapper{
+		position: relative;
+		z-index:0;
+		top:0px;
+    	right: 0px;
+	}
+}
+/* ==========================================================================
 navbar
 ========================================================================== */
+@media (max-width: 767px){
+	#float-menu{
+		bottom:80px !important;
+		right:0px !important;
+	}
+	.add-button-wrapper{
+		 bottom: 0px !important;
+		 right: 0px !important;
+		 z-index: 1030 !important;
+	}
+}
+.clear-filter{
+	float:right;
+	margin-top:-6.5px;
+}
 #menu-show{
 	transition:opacity 0.3s;
 	-webkit-transition:opacity 0.3s;

@@ -2,11 +2,11 @@
     "main": {
         "buttons":{
         	"clear": "Clear",
-        	"add": "Add task"
+        	"add": "Add Tasks"
         },
         "shows":{
-        	"query": "Showing tasks filtered by: {{query}}"
+        	"query": "Tasks filters by: {{query}}"
         },
-        "filter" : "Search tasks"
+        "filter" : "Search task"
     }
 }

@@ -28,10 +28,11 @@
 							</div>
 							<div class="row" id="button-add-task-wrapper ">
 								
-								<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+								<div class="col-lg-4 col-md-6 col-sm-6 col-xs-12" id="alerts-wrapper">
 									<p class="alert alert-success" ng-if="query!=null && query!=''" >
 										<span translate="main.shows.query" translate-values="{query: '{{query}}'}" ></span>
-										<a href="#" class="" ng-click="removeQuery()"> Remove filter</a>
+										<a class="btn btn-success clear-filter" href="#" ng-click="removeQuery()"> 
+											<span class="glyphicon glyphicon-erase"></span></a>
 									</p>
 								</div>
 								<div class="modal fade" id="addTaskModal" tabindex="-1" role="dialog" aria-labelledby="addTaskModal" aria-hidden="true">

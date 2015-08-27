@@ -5,7 +5,7 @@
         	"add": "Añadir Tarea"
         },
         "shows":{
-        	"query": "Mostrando Tareas filtradas por: {{query}}"
+        	"query": "Tareas filtradas por: {{query}}"
         },
         "filter" : "Buscar tareas"
     }
