@@ -1,30 +1,30 @@
 {
     "settings": {
     	"gohome":"Ir al panel de tareas",
-        "title": "Perfil de usuario, <b>{{username}}</b>",
+        "title": "Perfil de usuario <b>{{username}}</b>",
         "form": {
-            "firstname": "First Name",
-            "firstname.placeholder": "Your first name",
-            "lastname": "Last Name",
-            "lastname.placeholder": "Your last name",
-            "button": "Save"
+            "firstname": "Nombre",
+            "firstname.placeholder": "Nombre",
+            "lastname": "Apellidos",
+            "lastname.placeholder": "Apellidos",
+            "button": "Guardar"
         },
         "messages": {
             "error": {
-                "fail": "<strong>An error has occurred!</strong> Settings could not be saved.",
+                "fail": "<strong>Ha ocurrido un error!</strong> la información no ha sido almacenada.",
                 "emailexists": "<strong>E-mail is already in use!</strong> Please choose another one."
             },
-            "success": "<strong>Settings saved!</strong>",
+            "success": "<strong>La información ha sido guardada!</strong>",
             "validate": {
                 "firstname": {
-                    "required": "Your first name is required.",
-                    "minlength": "Your first name is required to be at least 1 character",
-                    "maxlength": "Your first name cannot be longer than 50 characters"
+                    "required": "El campo nombre es obligatorio.",
+                    "minlength": "El nombre debe tener como mínimo un caracter.",
+                    "maxlength": "El nombre no puede tener más de 50 caracteres."
                 },
                 "lastname": {
-                    "required": "Your last name is required.",
-                    "minlength": "Your last name is required to be at least 1 character",
-                    "maxlength": "Your last name cannot be longer than 50 characters"
+                    "required": "El campo apellido es obligatorio.",
+                    "minlength": "El apellido debe tener como mínimo un caracter.",
+                    "maxlength": "El apellido no puede tener más de 50 caracteres."
                 }
             }
         }
