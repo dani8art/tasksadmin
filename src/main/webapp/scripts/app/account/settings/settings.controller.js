@@ -26,4 +26,16 @@ angular.module('tasksadminApp')
         		return "selected";
         	}
         }
+        
+        $scope.setLanguage = function(language){
+        	$scope.settingsAccount.langKey = language;
+        	$scope.save();
+        }
+        
+        $scope.successDismiss = function(){
+        	$scope.success=null;
+        }
+        $scope.errorDismiss= function(){
+        	$scope.error=null;
+        }
     });

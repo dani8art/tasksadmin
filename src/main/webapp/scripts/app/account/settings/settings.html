@@ -10,6 +10,23 @@
 		            <a href="" class="btn btn-danger" ng-click="logout()"><span class="glyphicon glyphicon-log-out"></span>
                             &#xA0;<span translate="global.menu.account.logout">Log out</span></a>
 		        </div>
+		        <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12" id="alerts-wrapper">
+		        	<div class="alert alert-success alert-dismissible" ng-show="success" >
+		        		 <button type="button" class="close" ng-click="successDismiss()" aria-label="Close">
+		        		 	<span aria-hidden="true">&times;</span></button>
+		                <strong translate="settings.messages.success">Settings saved!</strong>
+		            </div>		
+		            <div class="alert alert-danger alert-dismissible" ng-show="errorEmailExists" translate="settings.messages.error.emailexists">
+		                <button type="button" class="close" ng-click="errorEmailDismiss()" aria-label="Close">
+		        		 	<span aria-hidden="true">&times;</span></button>
+		                <strong>E-mail is already in use!</strong> Please choose another one.
+		            </div>		
+		            <div class="alert alert-danger" ng-show="error" translate="settings.messages.error.fail">
+		            	<button type="button" class="close" ng-click="errorDismiss()" aria-label="Close">
+		        		 	<span aria-hidden="true">&times;</span></button>
+		                <strong>An error has occurred!</strong> Settings could not be saved.
+		            </div>
+		        </div>
 	        </div>
 	        <div class="row">
 	        	<div class=" card-wrapper">
@@ -21,7 +38,7 @@
 				  	<div  class="col-lg-4 col-md-4 col-sm-4 col-xs-4 ">
 				        <div class="card" ng-controller="LanguageController">
 				        	<p><b>Select your language:</b></p>		        	
-						   	<a href="" style="text-decoration: none;"  ng-repeat="language in languages" ng-click="changeLanguage(language);">
+						   	<a href="" style="text-decoration: none;"  ng-repeat="language in languages" ng-click="changeLanguage(language); setLanguage(language);">
 						       	<span class="bandera bandera-{{language}} {{isLangSelected(language)}}"></span>
 						   	</a>		            
 						</div>    
@@ -31,22 +48,11 @@
         	<!-- <li ui-sref-active="active" ng-switch-when="true"><a ui-sref="password"><span class="glyphicon glyphicon-lock"></span>
                             &#xA0;<span translate="global.menu.account.password">Password</span></a></li>
                   >-->      
-			<div class="row">
-	            <div class="alert alert-success" ng-show="success" translate="settings.messages.success">
-	                <strong>Settings saved!</strong>
-	            </div>
-	
-	            <div class="alert alert-danger" ng-show="errorEmailExists" translate="settings.messages.error.emailexists">
-	                <strong>E-mail is already in use!</strong> Please choose another one.
-	            </div>
-	
-	            <div class="alert alert-danger" ng-show="error" translate="settings.messages.error.fail">
-	                <strong>An error has occurred!</strong> Settings could not be saved.
-	            </div>
+			<div class="row">	            
 				<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
 					<div class="card">
 			            <form name="form" role="form" novalidate ng-submit="save()" show-validation>
-			
+							<h3>Datos personales</h3>
 			                <div class="form-group">
 			                    <label translate="settings.form.firstname">First Name</label>
 			                    <input type="text" class="form-control" name="firstName" placeholder="{{'settings.form.firstname.placeholder' | translate}}"
