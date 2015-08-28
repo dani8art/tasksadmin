@@ -6,7 +6,7 @@
 
     <changeSet id="20150828113200" author="darteaga">
         
-        <modifyDataType columnName="description" newDataType="text" schemaName="tasksadmin" tableName="TASK"/>
+        <modifyDataType columnName="description" newDataType="text"  tableName="TASK"/> <!-- schemaName="tasksadmin" -->
 
     </changeSet>
 </databaseChangeLog>
