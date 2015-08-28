@@ -13,6 +13,8 @@ body {
 .lead{
 	font-size: 19px;
 }
+
+
 /* ==========================================================================
 Hide ng-cloak on page load, https://docs.angularjs.org/api/ng/directive/ngCloak
 ========================================================================== */
@@ -22,21 +24,37 @@ Hide ng-cloak on page load, https://docs.angularjs.org/api/ng/directive/ngCloak
 /* ==========================================================================
 language
 ========================================================================== */
-.bandera-en{
-	background-image: url(../images/idiomas/banderas-en.png);
+.card{
+	margin: 15px 0px;	
+	border: 1px solid #CCCCCC;
+	padding:15px;
+	background-color: #F2F1EE;
+}
+/* ==========================================================================
+language
+========================================================================== */
+.bandera{
 	display: inline-block;
 	background-size:cover;
 	width: 30px;
 	height: 30px;
 	text-decoration:none;
 }
+.bandera-en{
+	background-image: url(../images/idiomas/banderas-en.png);	
+}
 .bandera-es{
-	background-image: url(../images/idiomas/banderas-es.png);
-	display: inline-block;
-	background-size:cover;
-	width: 30px;
-	height: 30px;
-	text-decoration:none;
+	background-image: url(../images/idiomas/banderas-es.png);	
+}
+.bandera.selected{
+    background-size: 36px 36px;
+    background-position: -4px;
+    width: 35px;
+    height: 35px;
+    border: 3px solid #4cae4c;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
 }
 /* ==========================================================================
 sections

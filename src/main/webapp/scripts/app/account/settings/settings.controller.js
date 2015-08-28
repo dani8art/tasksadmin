@@ -20,4 +20,10 @@ angular.module('tasksadminApp')
                 $scope.error = 'ERROR';
             });
         };
+        
+        $scope.isLangSelected = function(language){
+        	if($scope.settingsAccount.langKey == language){
+        		return "selected";
+        	}
+        }
     });
