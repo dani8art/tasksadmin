@@ -101,16 +101,15 @@
 																				  	</button>
 																				</div>
 																			</div>
-																      		<textarea rows="10" class="form-control modal-input" style="text-align:justify;text-transform:none;" name="description" ng-model="task.description" ng-maxlength="200" id="description" placeholder="DESCRIPTION" required></textarea>
-																    		<span>{{task.description.length + ' / ' + '200 characteres.'}}</span>
+																      		<textarea rows="10" class="form-control modal-input" style="text-align:justify;text-transform:none;" 
+																      					name="description" ng-model="task.description" 
+																      					id="description" placeholder="DESCRIPTION" required></textarea>
+																    		
 																    		<div ng-show="editForm.description.$invalid">
 												                                <span class="modal-required" style="top:-40px;"
 												                                   ng-show="editForm.description.$error.required">
 												                                    *
 												                                </span>
-												                                <p class="help-block" ng-show="editForm.description.$error.maxlength">
-												                                    Max length is 200 characteres.
-												                                </p>
 												                            </div>
 																    	
 																    	</div>
