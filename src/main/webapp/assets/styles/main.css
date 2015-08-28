@@ -201,6 +201,9 @@ header principal
 /* ==========================================================================
 alerts
 ========================================================================== */
+.alert{
+	border: 1px solid #488948;
+}
 #alerts-wrapper{
 	position: fixed;
     top: 10px;
@@ -241,6 +244,23 @@ navbar
 }
 #menu-show.show{
 	opacity:1;
+}
+#menu-show .row{
+	margin-right: 0px;
+}
+#menu-show .btn{
+	border-radius: 50%;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    line-height: 2.3;
+}
+#completed-wrapper .btn{
+	margin-bottom:15px;
+}
+#menu-show .btn-success{
+	border: 1px solid #488948;
 }
 #search-wrapper input{
 	margin-top: 4px;
@@ -403,6 +423,7 @@ Task style
 	float:none;
 	display:inline-flex;
 	display: -webkit-inline-flex;
+	
 }
 .task-description{
 	margin-top:15px;

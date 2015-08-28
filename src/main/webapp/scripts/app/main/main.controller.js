@@ -8,6 +8,9 @@ angular.module('tasksadminApp')
         }).then(function(){
         	
         	if($scope.isAuthenticated()){
+        		
+        		$('[data-toggle="tooltip"]').tooltip();
+        		
         		$scope.showMenu = function(){
         			$("#menu-show").addClass("show");
         		}
@@ -69,7 +72,7 @@ angular.module('tasksadminApp')
     	                result.completed=1;    	               
     	                //$('#addTaskModal').modal('show');
     	                Task.update(result,function () {
-    	                	$('#'+id).closest('.task').delay(500).slideUp(1000,function(){
+    	                	$('#'+id).closest('.task').delay(300).fadeOut(600,function(){
     	                		$(this).closest(".task-wrapper").remove();
     	                	});
     	    	            //$scope.tasks=Task.getByUser({login:$scope.account.login});
