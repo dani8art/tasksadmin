@@ -75,11 +75,12 @@ public class UserService {
         return newUser;
     }
 
-    public void updateUserInformation(String firstName, String lastName, String email) {
+    public void updateUserInformation(String firstName, String lastName, String email, String langKey) {
         User currentUser = userRepository.findOneByLogin(SecurityUtils.getCurrentLogin());
         currentUser.setFirstName(firstName);
         currentUser.setLastName(lastName);
         currentUser.setEmail(email);
+        currentUser.setLangKey(langKey);
         userRepository.save(currentUser);
         log.debug("Changed Information for User: {}", currentUser);
     }
