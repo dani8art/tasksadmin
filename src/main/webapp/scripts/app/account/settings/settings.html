@@ -118,7 +118,14 @@
 			            </form>
 			          </div>
 		         </div>
-		         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12"><div class="card"><p>{{settingsAccount | json}}</p></div></div>
+		         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+		         	<div class="card">
+		         		<p><b>Tus Roles:</b></p>
+		         		<ul>
+		         			<li ng-repeat="role in settingsAccount.roles">{{role}}</li>		         		
+		         		</ul>
+					</div>
+				</div>
 	        </div>
         </div>
     </div>
