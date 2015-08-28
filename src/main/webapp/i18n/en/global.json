@@ -12,7 +12,7 @@
             },
             "account": {
                 "main": "Account",
-                "settings": "Settings",
+                "settings": "Profile TasksAdmin",
                 "password": "Password",
                 "sessions": "Sessions",
                 "login": "Authenticate",
