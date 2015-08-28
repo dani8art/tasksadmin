@@ -30,12 +30,12 @@
 	        </div>
 	        <div class="row">
 	        	<div class=" card-wrapper">
-	        		<div class="col-lg-8 col-md-8 col-sm-8 col-xs-8 ">
+	        		<div class="col-lg-8 col-md-8 col-sm-8 col-xs-12 ">
 	        			<div class="card">
 		        			<h2 translate="settings.title" translate-values="{username: '{{settingsAccount.login}}'}">User settings</h2>	
 		        		</div>        		
 				    </div> 
-				  	<div  class="col-lg-4 col-md-4 col-sm-4 col-xs-4 ">
+				  	<div  class="col-lg-4 col-md-4 col-sm-4 col-xs-12 ">
 				        <div class="card" ng-controller="LanguageController">
 				        	<p><b>Select your language:</b></p>		        	
 						   	<a href="" style="text-decoration: none;"  ng-repeat="language in languages" ng-click="changeLanguage(language); setLanguage(language);">
@@ -118,7 +118,14 @@
 			            </form>
 			          </div>
 		         </div>
-		         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12"><div class="card"><p>{{settingsAccount | json}}</p></div></div>
+		         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+		         	<div class="card">
+		         		<p><b>Tus Roles:</b></p>
+		         		<ul>
+		         			<li ng-repeat="role in settingsAccount.roles">{{role}}</li>		         		
+		         		</ul>
+					</div>
+				</div>
 	        </div>
         </div>
     </div>

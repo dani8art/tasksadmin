@@ -5,7 +5,7 @@ angular.module('tasksadminApp')
         $stateProvider
             .state('settings', {
                 parent: 'account',
-                url: '/settings',
+                url: '/profile',
                 data: {
                     roles: ['ROLE_USER'],
                     pageTitle: 'global.menu.account.settings'
