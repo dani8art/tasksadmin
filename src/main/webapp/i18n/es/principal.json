@@ -11,10 +11,10 @@
 			}
 		},
 		"login":{
-			"title":"Autenticatión",
+			"title":"Autenticación",
 			"placeholders":{
-				"login":"Tu login",
-				"password":"Tu password"
+				"login":"Username",
+				"password":"Password"
 			},
 			"remember":"Recordar credenciales",
 			"error": {

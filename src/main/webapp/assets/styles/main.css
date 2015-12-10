@@ -68,12 +68,11 @@ sections
 .main{
 	padding: 120px 0px 100px;
 }
-
 .style1{
-	background-color: #fff;
+	/**background-color: #fff;**/
 }
 .style1 p{
-	color:rgba(70, 70, 70, 0.80);
+	color:#fff;
 }
 .style1 a:hover{
 	background:rgba(255,255,255,.75)
@@ -110,7 +109,7 @@ sections
 	margin: 12px 0px;
 }
 header.major::after {
-    background: rgba(144, 144, 144, 0.498039);
+    background: #fff;
     content: "";
     display: inline-block;
     height: 1px;
@@ -148,9 +147,41 @@ input.button.special:hover{
 /* ==========================================================================
 header principal
 ========================================================================== */
+.carousel-control.left{
+    background-image: none; 
+    background-image: none;
+    background-image: none; 
+    background-image: none; 
+    background-repeat: no-repeat; 
+}
+.carousel-control.right{
+    background-image: none; 
+    background-image: none;
+    background-image: none; 
+    background-image: none; 
+    background-repeat: no-repeat; 
+}
+.carousel-control .glyphicon-chevron-left, .carousel-control .glyphicon-chevron-right, .carousel-control .icon-prev, .carousel-control .icon-next {
+    width: 90px;}
+#carousel-principal{
+	min-height: 100%;
+	
+}
+.nav-principal .glyphicon-user{
+	font-size: 38px;
+    padding: 20px;
+    background-color: #4fa49a;
+    border-radius: 50%;
+    margin-right: 30px;
+    cursor:pointer;
+    border: 1px solid #4fa49a;
+}
+.nav-principal .glyphicon-user:hover{
+	border: 1px solid #9dc66b;
+	box-shadow: 1xp 1px 1px rbga(0,0,0,0.7)
+}
 #header{
-	padding: 40px 0;
-	padding-top: 160px;
+	padding-top: 105px;
     background-color: #fff;
     color: #fff ;
     background-attachment: fixed,fixed,fixed;
@@ -159,7 +190,7 @@ header principal
     background-size: auto,cover,cover;
     overflow: hidden;
     margin-top:-70px;
-    min-height: 700px;
+    height: 100vh;
 }
 #header .glyphicon{
 	font-size:90px;
@@ -219,6 +250,13 @@ header principal
 #header .actions:after, #header:after {
     content: '';
 } 
+
+#loginModal form{
+	margin-top: 30px;
+}
+#loginModal .modal-content{
+	padding:15px
+}
 /* ==========================================================================
 alerts
 ========================================================================== */
@@ -320,7 +358,7 @@ navbar
 }
 .nav-principal{
 	width: 100%;
-	z-index:3000;
+	z-index:900;
 	color:#fff;	
 	padding:20px 0px;
 	position:fixed;

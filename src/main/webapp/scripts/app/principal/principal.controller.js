@@ -27,18 +27,9 @@ angular.module('tasksadminApp')
                         $scope.authenticationError = true;
                     });
                 };
-        		$('.scrolly').scrolly();
         		
-        		$(document).scroll(function () {
-        			var scroll = $(this).scrollTop();
-        	        var topDist = $(".nav-principal").position();
-        	        if (scroll > topDist.top + 70) {
-        	            $('div.nav-principal').css({"background-image":"linear-gradient(45deg, #9dc66b 5%, #4fa49a 30%, #4361c2)"});   
-        	            
-        	        } else if (scroll < topDist.top + 70){
-        	            $('div.nav-principal').css({"background-image":"none"});
-        	        }
-        		});
+        		$('#carousel-principal').carousel('cycle');
+        		
         	}
         }).catch(function(){
         	$scope.login = function () {
@@ -58,7 +49,6 @@ angular.module('tasksadminApp')
                     $scope.authenticationError = true;
                 });
             };
-        	$('.scrolly').scrolly();
         });
        
     });
