@@ -14,16 +14,44 @@
 			"title":"Autenticación",
 			"placeholders":{
 				"login":"Username",
+				"password":"Password",
+				"email":"Email",
+				"passwordconfirm":"Confirma tu password"
+			},
+			"remember":"Recordar credenciales",
+			"error": {
+                "authentication": "<strong>¡El login ha fallado!</strong> por favor comprueba tus credenciales e intentalo de nuevo."
+            }
+		},
+		"registration":{
+			"title":"Nueva Cuenta",
+			"placeholders":{
+				"login":"Username",
 				"password":"Password"
 			},
 			"remember":"Recordar credenciales",
 			"error": {
-                "authentication": "<strong>Authentication failed!</strong> Please check your credentials and try again."
+                "authentication": "<strong>¡El login ha fallado!</strong> por favor comprueba tus credenciales e intentalo de nuevo."
             }
 		},
-		"registration":{
-			"title":"Registro"
-		},
+		"register": {
+	        "messages": {
+	            "validate": {
+	                "login": {
+	                    "required": "El nombre de usuario es obligatorio.",
+	                    "minlength": "Al menos debe tener mas de un carácter",
+	                    "maxlength": "No puede ser mayor de 50 carácteres",
+	                    "pattern": "Solo puede tener letras minúsculas y dígitos"
+	                }
+	            },
+	            "success": "<strong>¡Registro Correcto!</strong> Por favor comprueba tu email de confirmación.",
+	            "error": {
+	                "fail": "<strong>¡Registro Erroneo!</strong> Por favor intentalo más tarde.",
+	                "userexists": "<strong>¡El nombre de usuario ya existe!</strong> Por favor elíge otro.",
+	                "emailexists": "<strong>¡Este email ya tiene cuenta asociada!</strong> Para recuperar la contraseña click <a href=\"\">aquí</a>."
+	            }
+	        }
+	    },
 		"section1":{
 			"title":"¡Sube tus Post-it a la nube! </br> Mueve tus recuerdos a través de Internet.",
 			"description":"Task Admin te permite tener tus recordatorios en cualquier momento y en cualquier lugar del mundo. Ademas ofrece facilidad de uso y un diseño intuitivo."

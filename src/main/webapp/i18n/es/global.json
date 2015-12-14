@@ -45,7 +45,13 @@
         "messages": {
             "info": {
                 "authenticated": "If you want to <a href=\"#/login\">authenticate</a>, you can try the default accounts:<br/>- Administrator (login=\"admin\" and password=\"admin\") <br/>- User (login=\"user\" and password=\"user\").",
-                "register": "¿Todavía no tienes cuenta? <a href=\"#/register\">Registrate aquí.</a>"
+                "register":{
+                	"p" : "¿Todavía no tienes cuenta?", 
+                	"href" : "Registrate aquí."
+                },
+                "login":{ 
+                	"href" : "Ir a login"
+                }
             },
             "error": {
                 "dontmatch" : "Las password no coinciden."
