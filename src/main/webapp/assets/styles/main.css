@@ -74,9 +74,7 @@ sections
 .style1 p{
 	color:#fff;
 }
-.style1 a:hover{
-	background:rgba(255,255,255,.75)
-}
+
 .style2 {
     background-color: #333;
     color: rgba(255,255,255,.75);
@@ -96,11 +94,11 @@ sections
 .style2 a:hover{
 	color:rgba(255,255,255,.75);
 }
-#three{
-	padding-top:85px;
-}
 #three p{
 	margin-bottom:35px;
+}
+#three a{
+	margin-bottom:10px;
 }
 #four{
 	padding-top:85px;
@@ -147,6 +145,11 @@ input.button.special:hover{
 /* ==========================================================================
 header principal
 ========================================================================== */
+@media (max-width: 767px){
+	#header #three .glyphicon{
+		font-size:15px;
+	}
+}
 .carousel-control.left{
     background-image: none; 
     background-image: none;
@@ -161,6 +164,28 @@ header principal
     background-image: none; 
     background-repeat: no-repeat; 
 }
+.carousel-caption {
+    bottom: 0px;
+    height: 100%;
+    display:block;
+    margin-top:auto;
+    margin-bottom:auto;
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+.wrapper-center{
+	display: table;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+.inner-center{
+	display: table-cell;
+    vertical-align: middle;
+}
+.carousel-inner{
+	height: 100vh;
+}
 .carousel-control .glyphicon-chevron-left, .carousel-control .glyphicon-chevron-right, .carousel-control .icon-prev, .carousel-control .icon-next {
     width: 90px;}
 #carousel-principal{
@@ -174,14 +199,17 @@ header principal
     border-radius: 50%;
     margin-right: 30px;
     cursor:pointer;
-    border: 1px solid #4fa49a;
+    border: 1px solid #307E75;
+}
+.carousel-inner .item>img{
+	height: 100vh;
 }
 .nav-principal .glyphicon-user:hover{
-	border: 1px solid #9dc66b;
+	background-color: #3C8D83;
 	box-shadow: 1xp 1px 1px rbga(0,0,0,0.7)
 }
 #header{
-	padding-top: 105px;
+	
     background-color: #fff;
     color: #fff ;
     background-attachment: fixed,fixed,fixed;
