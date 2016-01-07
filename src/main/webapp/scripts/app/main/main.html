@@ -139,49 +139,179 @@
 							</div>
 							
 							<div class="col-md-12" id="task-list-wrapper">
-								<div class="row" id="task-list" >
-									<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 task-wrapper" ng-repeat="(i,task) in tasks | filter:query" >
-										<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 task {{taskColour(task.id)}}">
-											<div class="row task-header" id="{{task.id}}">
-												<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center">
-													<h4>
-														<span class="task-title" >{{task.title}}</span>
-													</h4>
-													<!-- glyphicon glyphicon-check -->
-												</div>												
-											</div>
-											<div class="row taskcontent task-content" id="task-content-{{task.id}}">
-												<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center">
-													<small>
-														<span class="glyphicon glyphicon-time "></span>
-														<span class="task-end_date" > {{task.endDate | date: "yyyy-MM-dd"}}</span>
-													</small>
-												
-													<small><span class="glyphicon glyphicon-flash"></span><span class="task-priority"> {{task.priority}}</span></small>
-												</div>
-											  	<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-justify">											  
-											  		<p class="task-description" ng-bind-html="task.description"></p>
-										    	</div>
-										    	<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-										    		<div class="row task-tools text-center" id="">
-										    			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-															<small><b class=""></b><a class="task-topic" ng-click="filtrarPorTopic(task.topic)" href="#">{{task.topic}}</a> | </small>
-															<small><b class=""> </b><a class="task-type"  ng-click="filtrarPorTipo(task.type)" href="#"> {{task.type}}</a></small>
+								<div class="row" id="task-list-per-priority" >
+									<div class="col-md-3" id="priority-1">
+										<div class="row text-center"><div><h4>Extreme Urgency</h4></div></div>
+										<div class="row">
+											<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 task-wrapper" ng-repeat="(i,task) in tasks | filter:query" ng-if="task.priority==1">
+												<div  class="col-lg-12 col-md-12 col-sm-12 col-xs-12 task {{taskColour(task.id)}}">
+													<div class="row task-header" id="{{task.id}}">
+														<div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+															<h4>
+																<span class="task-title" >{{task.title}}</span>
+															</h4>
 														</div>
-														<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 btn-tools">
-															<div class="btn-group btn-group-justified" role="group" >
-																<a type="button" ng-click="completeTask(task.id)" class="btn btn-success btn-sm task-check"><span class="glyphicon glyphicon-ok"></span> </a>																
-																<a type="button" ng-click="update(task.id)" class="btn btn-warning btn-sm edit-task"><span class="glyphicon glyphicon-pencil"></span> </a>
-																<a type="button" ng-click="deleteid(task.id)" class="btn btn-danger btn-sm delete-task"><span class="glyphicon glyphicon-trash"></span> </a>
+														<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 text-right">
+															<div class="btn-group btn-group-justified btn-tools-group" role="group" >
+																<a type="button" ng-click="completeTask(task.id)" class="btn-link btn-sm btn-tools task-check "><span class="glyphicon glyphicon-ok"></span> </a>																
+																<a type="button" ng-click="update(task.id)" class="btn-link btn-sm btn-tools edit-task"><span class="glyphicon glyphicon-pencil"></span> </a>
+																<a type="button" ng-click="deleteid(task.id)" class="btn-link btn-sm btn-tools delete-task"><span class="glyphicon glyphicon-trash"></span> </a>
 															</div>
+														</div>												
+													</div>
+													<div class="row taskcontent task-content" id="task-content-{{task.id}}">
+													  	<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-justify">											  
+													  		<p class="task-description" ng-bind-html="task.description"></p>
+												    	</div>
+												    	<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+												    		<div class="row text-center" id="">
+												    			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+																	<small><b class=""></b><a class="task-topic" ng-click="filtrarPorTopic(task.topic)" href="#">{{task.topic}}</a> | </small>
+																	<small><b class=""> </b><a class="task-type"  ng-click="filtrarPorTipo(task.type)" href="#"> {{task.type}}</a></small>
+																</div>
+												    		</div>
+												    	</div>												    													    	
+														<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 text-right">
+															<small>
+																<span class="glyphicon glyphicon-time "></span>
+																<span class="task-end_date" > {{task.endDate | date: "yyyy-MM-dd"}}</span>
+															</small>
 														</div>
-										    		</div>
-										    	</div>
+													</div>
+												</div>
+												
 											</div>
 										</div>
-										
-									</div>
-									
+									</div><!-- priority-1 -->
+									<div class="col-md-3" id="priority-2">
+										<div class="row text-center"><div><h4>Urgency</h4></div></div>
+										<div class="row">
+											<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 task-wrapper" ng-repeat="(i,task) in tasks | filter:query" ng-if="task.priority==2">
+												<div  class="col-lg-12 col-md-12 col-sm-12 col-xs-12 task {{taskColour(task.id)}}">
+													<div class="row task-header" id="{{task.id}}">
+														<div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+															<h4>
+																<span class="task-title" >{{task.title}}</span>
+															</h4>
+														</div>
+														<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 text-right">
+															<div class="btn-group btn-group-justified btn-tools-group" role="group" >
+																<a type="button" ng-click="completeTask(task.id)" class="btn-link btn-sm btn-tools task-check "><span class="glyphicon glyphicon-ok"></span> </a>																
+																<a type="button" ng-click="update(task.id)" class="btn-link btn-sm btn-tools edit-task"><span class="glyphicon glyphicon-pencil"></span> </a>
+																<a type="button" ng-click="deleteid(task.id)" class="btn-link btn-sm btn-tools delete-task"><span class="glyphicon glyphicon-trash"></span> </a>
+															</div>
+														</div>												
+													</div>
+													<div class="row taskcontent task-content" id="task-content-{{task.id}}">
+													  	<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-justify">											  
+													  		<p class="task-description" ng-bind-html="task.description"></p>
+												    	</div>
+												    	<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+												    		<div class="row text-center" id="">
+												    			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+																	<small><b class=""></b><a class="task-topic" ng-click="filtrarPorTopic(task.topic)" href="#">{{task.topic}}</a> | </small>
+																	<small><b class=""> </b><a class="task-type"  ng-click="filtrarPorTipo(task.type)" href="#"> {{task.type}}</a></small>
+																</div>
+												    		</div>
+												    	</div>												    													    	
+														<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 text-right">
+															<small>
+																<span class="glyphicon glyphicon-time "></span>
+																<span class="task-end_date" > {{task.endDate | date: "yyyy-MM-dd"}}</span>
+															</small>
+														</div>
+													</div>
+												</div>
+												
+											</div>
+										</div>
+									</div><!-- priority-2 -->
+									<div class="col-md-3" id="priority-3">
+										<div class="row text-center"><div><h4>Moderate</h4></div></div>
+										<div class="row">
+											<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 task-wrapper" ng-repeat="(i,task) in tasks | filter:query" ng-if="task.priority==3">
+												<div  class="col-lg-12 col-md-12 col-sm-12 col-xs-12 task {{taskColour(task.id)}}">
+													<div class="row task-header" id="{{task.id}}">
+														<div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+															<h4>
+																<span class="task-title" >{{task.title}}</span>
+															</h4>
+														</div>
+														<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 text-right">
+															<div class="btn-group btn-group-justified btn-tools-group" role="group" >
+																<a type="button" ng-click="completeTask(task.id)" class="btn-link btn-sm btn-tools task-check "><span class="glyphicon glyphicon-ok"></span> </a>																
+																<a type="button" ng-click="update(task.id)" class="btn-link btn-sm btn-tools edit-task"><span class="glyphicon glyphicon-pencil"></span> </a>
+																<a type="button" ng-click="deleteid(task.id)" class="btn-link btn-sm btn-tools delete-task"><span class="glyphicon glyphicon-trash"></span> </a>
+															</div>
+														</div>												
+													</div>
+													<div class="row taskcontent task-content" id="task-content-{{task.id}}">
+													  	<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-justify">											  
+													  		<p class="task-description" ng-bind-html="task.description"></p>
+												    	</div>
+												    	<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+												    		<div class="row text-center" id="">
+												    			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+																	<small><b class=""></b><a class="task-topic" ng-click="filtrarPorTopic(task.topic)" href="#">{{task.topic}}</a> | </small>
+																	<small><b class=""> </b><a class="task-type"  ng-click="filtrarPorTipo(task.type)" href="#"> {{task.type}}</a></small>
+																</div>
+												    		</div>
+												    	</div>												    													    	
+														<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 text-right">
+															<small>
+																<span class="glyphicon glyphicon-time "></span>
+																<span class="task-end_date" > {{task.endDate | date: "yyyy-MM-dd"}}</span>
+															</small>
+														</div>
+													</div>
+												</div>
+												
+											</div>
+										</div>
+									</div><!-- priority-3 -->
+									<div class="col-md-3" id="priority-4">
+										<div class="row text-center"><div><h4>Low</h4></div></div>
+										<div class="row">
+											<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 task-wrapper" ng-repeat="(i,task) in tasks | filter:query" ng-if="task.priority==4">
+												<div  class="col-lg-12 col-md-12 col-sm-12 col-xs-12 task {{taskColour(task.id)}}">
+													<div class="row task-header" id="{{task.id}}">
+														<div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+															<h4>
+																<span class="task-title" >{{task.title}}</span>
+															</h4>
+														</div>
+														<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 text-right">
+															<div class="btn-group btn-group-justified btn-tools-group" role="group" >
+																<a type="button" ng-click="completeTask(task.id)" class="btn-link btn-sm btn-tools task-check "><span class="glyphicon glyphicon-ok"></span> </a>																
+																<a type="button" ng-click="update(task.id)" class="btn-link btn-sm btn-tools edit-task"><span class="glyphicon glyphicon-pencil"></span> </a>
+																<a type="button" ng-click="deleteid(task.id)" class="btn-link btn-sm btn-tools delete-task"><span class="glyphicon glyphicon-trash"></span> </a>
+															</div>
+														</div>												
+													</div>
+													<div class="row taskcontent task-content" id="task-content-{{task.id}}">
+													  	<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-justify">											  
+													  		<p class="task-description" ng-bind-html="task.description"></p>
+												    	</div>
+												    	<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+												    		<div class="row text-center" id="">
+												    			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+																	<small><b class=""></b><a class="task-topic" ng-click="filtrarPorTopic(task.topic)" href="#">{{task.topic}}</a> | </small>
+																	<small><b class=""> </b><a class="task-type"  ng-click="filtrarPorTipo(task.type)" href="#"> {{task.type}}</a></small>
+																</div>
+												    		</div>
+												    	</div>												    													    	
+														<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 text-right">
+															<small>
+																<span class="glyphicon glyphicon-time "></span>
+																<span class="task-end_date" > {{task.endDate | date: "yyyy-MM-dd"}}</span>
+															</small>
+														</div>
+													</div>
+												</div>
+												
+											</div>
+										</div>
+									</div><!-- priority-3 -->										
 								</div> <!-- task-list -->
 							</div> <!-- task-list-wrapper -->
 						</div>

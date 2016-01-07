@@ -485,7 +485,7 @@ Task style
 ========================================================================== */
 .task{
 	padding: 15px 15px;
-	padding-top:5px;
+	padding-top:0px;
 }
 .task-yellow{
 	border: 1px solid #DDDFA1 /*#F3F781*/;
@@ -499,7 +499,22 @@ Task style
 	font-size:11px;
 }
 .btn-tools{
-	margin-top:15px;
+	text-decoration:none;
+	color:#fff;
+	padding: 10px 2px;
+}
+.btn-tools:hover{
+	text-decoration:none;
+}
+.btn-tools-group{
+	margin-top:10px;
+	margin-bottom:10px;
+}
+.task-blue .task-header{
+	background-color: #2ECCFA;
+}
+.task-yellow .task-header{
+	background-color: #DDDFA1;
 }
 .task-wrapper{
 	/*padding:25px;
@@ -514,7 +529,7 @@ Task style
 	
 }
 .task-description{
-	margin-top:15px;
+	padding-top:5px;
 }
 .task-header{
 	padding: 0px 0px;
